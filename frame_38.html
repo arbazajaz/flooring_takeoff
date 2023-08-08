@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <!-- Favicon -->
+   <link rel="icon" href="assets/images/favicon.png" type="image/ico" sizes="16x16" />
+   <!-- Stylesheet -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+   <title></title>
+</head>
+
+<body>
+   <!-- header  -->
+    <header>
+      <div class="container-fluid">
+        
+        <div class="row bg-white shadow">
+          <!-- Product name  -->
+          <div class="col-sm-6 pt-2">
+            <div>
+              <img src="assets/images/flooring/logo.png" alt="">
+            </div>
+          </div>
+
+          <!-- close minimise fullscreen icons  -->
+          <div class="col-sm-6 text-right">
+            <div class="d-flex justify-content-end">
+              <!-- minimise icon  -->
+              <a class="btn" href="#"
+                ><img
+                  src="assets/images/icons/minimize.png"
+                  alt="minimise"
+              /></a>
+              <!-- close icon  -->
+              <a class="btn" href="#"
+                ><img
+                  src="assets/images/icons/fullscreen.png"
+                  alt="fullscreen"
+              /></a>
+              <!-- close icon  -->
+              <a class="btn" href="#"
+                ><img
+                  src="assets/images/icons/Multiply.png"
+                  alt="close"
+              /></a>
+            </div>
+          </div>
+
+          <!-- top navigation menu -->
+          <div class="col-12 pt-3 pb-2">
+                 
+          <div class="accordion d-flex" id="menu_accordian">
+
+            <!-- File -->
+            <div class="menu-item">
+
+              <div id="menuFile">
+                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#file_menu"
+                  aria-expanded="true" aria-controls="file_menu">
+                  File
+                </button>
+              </div>
+
+              <div id="file_menu" class="collapse open-menu" aria-labelledby="menuFile" data-parent="#menu_accordian">
+                <div class="card">
+
+                  <div>
+                    <a class="dropdown-item" href="#">
+                      <div class="short_key">
+                        <p>Undo</p>
+                        <p>Ctrl+Z</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item disabled" href="#">
+                      <div class="short_key">
+                        <p>Redo</p>
+                        <p>Ctrl+Z</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="#">Suspend Undo</a>
+
+                    <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection points)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Edit -->
+            <div class="menu-item">
+              <div id="menuEdit">
+
+                <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#edit_menu"
+                  aria-expanded="false" aria-controls="edit_menu">
+                  Edit
+                </button>
+
+              </div>
+              <div id="edit_menu" class="collapse" aria-labelledby="menuEdit" data-parent="#menu_accordian">
+                <div class="card open-menu">
+
+                  <div>
+                    <a class="dropdown-item" href="#">
+                      <div class="short_key">
+                        <p>Undo</p>
+                        <p>Ctrl+Z</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item disabled" href="#">
+                      <div class="short_key">
+                        <p>Redo</p>
+                        <p>Ctrl+Z</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="#">Suspend Undo</a>
+                    <a class="dropdown-item" href="#">Floorplan Settings...</a>
+                    <a class="dropdown-item" href="#">
+                      <div class="short_key">
+                        <p>Room Settings</p>
+                        <p>F2</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <div class="short_key">
+                        <p>File Pile Directions</p>
+                        <p>Shift+F2</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <div class="short_key">
+                        <p>Materials</p>
+                        <p>F3</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item disabled" href="#">Cross Measures</a>
+                    <a class="dropdown-item" href="#">Room Rules...</a>
+                    <a class="dropdown-item" href="#">Re-scale from two drawing points</a>
+                    <a class="dropdown-item" href="#">
+                      <div class="short_key">
+                        <p>Border Settings...</p>
+                        <p>Alt+F3</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="#">Use Selected wall as start wall</a>
+                    <a class="dropdown-item" href="#">use pile direction globally from selected wall</a>
+                    <a class="dropdown-item" href="#">Re-scale to achieve a wall length...</a>
+                    <a class="dropdown-item" href="#">Scale XY...</a>
+                    <a class="dropdown-item" href="#">Expand, square up and copy room...</a>
+                    <a class="dropdown-item" href="#">
+                      <div class="short_key">
+                        <p>Copy</p>
+                        <p>Ctrl+C</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <div class="short_key">
+                        <p>Copy</p>
+                        <p>Ctrl+C</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <div class="short_key">
+                        <p>Paste</p>
+                        <p>Ctrl+V</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <div class="short_key">
+                        <p>Delete</p>
+                        <p>Del</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item disabled" href="#">
+                      <div class="short_key">
+                        <p>Find a Room</p>
+                        <p>#</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="#">Duplicate Room</a>
+                    <a class="dropdown-item" href="#">
+                      <div class="short_key">
+                        <p>Move Room</p>
+                        <p>Ctrl+M</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="#">Move plan by complete board size</a>
+                    <a class="dropdown-item" href="#">
+                      <div class="short_key">
+                        <p>Split Room</p>
+                        <p>Ctrl+F5</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection points)</a>
+                    <a class="dropdown-item disabled" href="#">Convert Corner to Arc</a>
+                    <a class="dropdown-item disabled" href="#">Convert Triangular Room to Circle</a>
+                    <a class="dropdown-item" href="#">Convert Rectangular Room to Ellipse</a>
+                    <a class="dropdown-item" href="#">Convert Room to 'Open Track'</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- TilePaint -->
+            <div class="menu-item">
+              <div id="menuTilepaint">
+
+                <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#tilepaint_menu"
+                  aria-expanded="false" aria-controls="tilepaint_menu">
+                  TilePaint
+                </button>
+
+              </div>
+              <div id="tilepaint_menu" class="collapse" aria-labelledby="menuTilepaint" data-parent="#menu_accordian">
+                <div class="card open-menu">
+                  <div>
+                    <a class="dropdown-item" href="#">Suspend Undo</a>
+
+                    <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection points)</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Draw -->
+            <div class="menu-item">
+              <div id="menuDraw">
+
+                <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#draw_menu"
+                  aria-expanded="false" aria-controls="draw_menu">
+                  Draw
+                </button>
+
+              </div>
+              <div id="draw_menu" class="collapse" aria-labelledby="menuDraw" data-parent="#menu_accordian">
+                <div class="card open-menu">
+                  <div>
+                    <a class="dropdown-item" href="#">Suspend Undo</a>
+
+                    <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection points)</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Layout -->
+            <div class="menu-item">
+              <div id="menuLayout">
+
+                <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#layout__menu"
+                  aria-expanded="false" aria-controls="layout__menu">
+                  Layout
+                </button>
+
+              </div>
+              <div id="layout__menu" class="collapse" aria-labelledby="menuLayout" data-parent="#menu_accordian">
+                <div class="card open-menu">
+                  <div>
+                    <a class="dropdown-item" href="#">Suspend Undo</a>
+
+                    <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection points)</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Background -->
+            <div class="menu-item">
+              <div id="menuBackground">
+
+                <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#background_menu"
+                  aria-expanded="false" aria-controls="background_menu">
+                  Background
+                </button>
+
+              </div>
+              <div id="background_menu" class="collapse" aria-labelledby="menuBackground" data-parent="#menu_accordian">
+                <div class="card open-menu">
+                  <div>
+                    <a class="dropdown-item" href="#">Suspend Undo</a>
+
+                    <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection points)</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- View -->
+            <div class="menu-item">
+              <div id="menuView">
+
+                <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#view_menu"
+                  aria-expanded="false" aria-controls="view_menu">
+                  View
+                </button>
+
+              </div>
+              <div id="view_menu" class="collapse" aria-labelledby="menuView" data-parent="#menu_accordian">
+                <div class="card open-menu">
+                  <div>
+                    <a class="dropdown-item" href="#">Suspend Undo</a>
+
+                    <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection points)</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Quantify -->
+            <div class="menu-item">
+              <div id="menuQuantify">
+
+                <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#Quantify_menu"
+                  aria-expanded="false" aria-controls="Quantify_menu">
+                  Quantify
+                </button>
+
+              </div>
+              <div id="Quantify_menu" class="collapse" aria-labelledby="menuQuantify" data-parent="#menu_accordian">
+                <div class="card open-menu">
+                  <div>
+                    <a class="dropdown-item" href="#">Suspend Undo</a>
+
+                    <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection points)</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Help -->
+            <div class="menu-item">
+              <div id="menuHelp">
+
+                <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#help_menu"
+                  aria-expanded="false" aria-controls="help_menu">
+                  Help
+                </button>
+
+              </div>
+              <div id="help_menu" class="collapse" aria-labelledby="menuHelp" data-parent="#menu_accordian">
+                <div class="card open-menu">
+                  <div>
+                    <a class="dropdown-item" href="#">Suspend Undo</a>
+
+                    <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection points)</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          </div>
+          <!-- end top navigation menu  -->
+        </div>
+
+        <!-- widgets row  -->
+        <div class="row justify-content-center position-relative">
+            
+            
+<div class="col-12 col-sm-7 py-3 bg-dark position-absolute c-form">
+  <div>
+    <form class="form-inline d-flex" action="#">
+      <!-- Net  -->
+      <label for="net">Net</label>
+      <input id="net" type="text" class="form-input" />
+      <!-- Net  -->
+      <label for="perim">Perim</label>
+      <input id="perim" type="text" class="form-input" />
+  
+      <select class="ml-4">
+        <option selected>NONE</option>
+        <option value="1">CPT-1 2' Carpet Tile,TBD</option>
+        <option value="2">LVT-1 6'*48' Luxury Vinyl Flooring, TBD</option>
+        <option value="3">PT-1 2'*1' Porcelain Tile, TBD</option>
+        <option value="3">VB-1 4' Johnsonite Vinyl Base, TBD</option>
+        <option value="3">TB-1 6' Tall Porcelain Tile Base, TBD</option>
+        <option value="3">Transition Strip</option>
+        <option value="3">Sheet</option>
+      </select>
+      <!-- Gross   -->
+      <label for="gross">Gross </label>
+      <input id="gross" type="text" class="form-input" />
+      <!-- Waste  -->
+      <label for="waste">Waste</label>
+      <input id="waste" type="text" class="form-input" />
+    </form>
+  </div>
+  </div>
+  
+        </div>
+
+      </div>
+    </header>
+    <!-- main -->
+    <main>
+      <section>
+        
+      </section>
+    </main>
+
+      <!-- JavaScript -->
+      <script src="assets/js/jquery-3.5.1.js"></script>
+      <script src="assets/js/popper.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+     
+
+</body>
+
+</html>

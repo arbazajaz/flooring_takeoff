@@ -1,0 +1,245 @@
+@font-face {
+    font-family: kanit;
+    src: url(../fonts/Kanit-Regular.ttf);
+}
+@font-face {
+    font-family: kanit-Light;
+    src: url(../fonts/Kanit-Light.ttf);
+}
+@font-face {
+    font-family: kanit-Medium;
+    src: url(../fonts/Kanit-Medium.ttf);
+}
+@font-face {
+    font-family: kanit-SemiBold;
+    src: url(../fonts/Kanit-SemiBold.ttf);
+}
+html{
+    scroll-behavior:smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: kanit;
+    overflow-x: hidden;
+}
+img{
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.bg-black {
+    background-color: black;
+}
+.bg-dark {
+    background-color: #1C293A !important;
+}
+.bg-granite {
+    background-color: #666666;
+}
+
+header .form-input{
+    border: 1px solid #2C2C2C80;
+    font-size: 12px;
+    margin: 2px 5px;
+    max-width: 70px;
+}
+header label{
+    font-size: 12px;
+    padding: 0px 7px;
+    color: white;
+}
+header select{
+    font-size: 12px;
+    max-width: 120px;
+}
+.form-input:focus{
+    border: 1px solid #5def0980;
+    outline: none;
+}
+header .menu-item {
+    text-transform: capitalize;
+}
+header .menu-item .btn{
+    font-family: Kanit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    color: white;
+    background-color: black;
+}
+header .menu-item .open-menu{
+    padding: 0px;
+    font-size: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    min-width: 250px;
+    z-index: 20;
+}
+header .menu-item .open-menu .dropdown-item{
+    padding: 0.3rem 0.5rem;
+}
+header .short_key{
+    display: flex;
+    justify-content: space-between;
+}
+header .menu-item .open-menu .dropdown-item .short_key p{
+    margin-bottom: 0px;
+}
+header .menu-item .open-menu .dropdown-item.active{
+    color: white;
+    background-color: #666666;
+}
+header .menu-item .open-menu .dropdown-item:hover{
+    color: white;
+    background-color: black;
+}
+header .menu-item .btn.collapsed{
+    background-color: white;
+    color: black;
+}
+header .menu-item .btn{
+    background-color: black;
+    color: white;
+}
+
+
+
+header .widget_btn{
+    height: 35px;
+    margin: 1px 0px;
+    width: 35px;
+    padding: 0px;
+    border: 1px solid #4A4A4A
+}
+header .widget_btn:hover{
+    background-color: #d9d5d5;
+}
+header .widget_btn img{
+    max-width: 100%;
+    height: 20px;
+    width: 20px;
+
+}
+
+header .menu-item {
+    position: relative;
+}
+header .menu-item {
+    position: relative;
+}
+header  .open-menu{
+    position: absolute !important;
+    top: 40px;
+    z-index: 2;
+}
+header  .open-menu p{
+   margin-bottom: 0px;
+
+}
+header .collapsing {
+    -webkit-transition: none;
+    transition: none;
+}
+
+
+
+/* modals  */
+.modal .form-group{
+    margin-bottom: 5px;
+}
+.modal input{
+    max-height: 22px;
+    font-weight: bold;
+}
+.modal label{
+    font-family: Kanit;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+}
+.modal label.disabled{
+    color: #cecccc;
+}
+.modal .card{
+    background: none;
+    border: 1px solid white;
+    display: block;
+    margin: 22px auto;
+    padding-top: 12px;
+    border-radius: 2px;
+}
+.modal .card .card-heading span{
+    display: inline-block;
+    position: absolute;
+    top: -11px;
+    left: 14px;
+    background: #666666;
+    font-size: 18px;
+}
+.modal-input{
+    border: 1px solid #2C2C2C80;
+    height: 22px;
+    background-color: white;
+    max-width: 159px;
+}
+.modal-input-sm{
+    max-width: 70px;
+}
+.modal-header{
+    background-color: #000000;
+    border: none;
+}
+.modal-body{
+    background-color: #666666;
+    color: white;
+}
+.modal-title{
+    color: white;
+}
+.modal-body .btn-light{
+    min-width: 120px;
+    margin: 2px 10px;
+    font-weight: bold;
+    border: 1px solid #2C2C2C80;
+}
+.modal-body .info-para{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    margin-bottom: 0px;
+}
+.w-60{
+    width: 60px;
+}
+
+.left-sidebar{
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.widget_span{
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    text-align: center;
+}
+.widget_span img{
+    max-width: 25px;
+    max-height: 25px;
+}
+.right-sidebar .widget_span{
+    display: inline-block;
+    padding: 3px 14px;
+}
+.c-form{
+    z-index: 10;
+}
