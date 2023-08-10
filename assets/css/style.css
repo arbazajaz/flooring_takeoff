@@ -156,8 +156,14 @@ header .collapsing {
     margin-bottom: 5px;
 }
 .modal input{
-    max-height: 22px;
     font-weight: bold;
+}
+.modal input{
+    /* max-height: 22px; */
+}
+.modal input::placeholder{
+    font-weight: 100;
+    color: #959595;
 }
 .modal label{
     font-family: Kanit;
@@ -215,8 +221,9 @@ font-size: 15px;
     color: white;
 }
 .modal-body .btn-light{
-    min-width: 120px;
+    min-width: 100px;
     margin: 2px 10px;
+    font-size: 15px;
     font-weight: bold;
     border: 1px solid #2C2C2C80;
 }
