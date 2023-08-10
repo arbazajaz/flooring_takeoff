@@ -191,6 +191,15 @@ header .collapsing {
     background-color: white;
     max-width: 159px;
 }
+.modal-select{
+    border: 1px solid #FFFFFF;
+    color: #959595;
+    font-size: 14px;
+}
+.modal-select option{
+font-size: 15px;
+    font-weight: 400;
+}
 .modal-input-sm{
     max-width: 70px;
 }
@@ -199,7 +208,7 @@ header .collapsing {
     border: none;
 }
 .modal-body{
-    background-color: #666666;
+    background-color: #1C293A;
     color: white;
 }
 .modal-title{
