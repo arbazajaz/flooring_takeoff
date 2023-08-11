@@ -259,3 +259,22 @@ font-size: 15px;
 .c-form{
     z-index: 10;
 }
+
+/* chat-Modal */
+.chat .search{
+  max-height: initial;
+    color: #1C293A;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'kanit';
+}
+.chat .search-lable{
+    background-color: #565E70;
+    padding: 6px 10px;
+}
+.chat .search-icon{
+   max-width: 20px;
+}
+.chat .notification img{
+    width: 40px;
+}
