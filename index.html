@@ -357,7 +357,7 @@
                         <span title="Start Working" class="widget_span"><img src="assets/images/icons/Start working.png"
                            alt=""></span>
                         <span class="widget_span"><img src="assets/images/icons/Add_File.png" alt=""></span>
-                        <span class="widget_span"><img src="assets/images/icons/edit_materials.png" alt=""></span>
+                        <span type="button" data-toggle="modal" data-target="#quantity"  class="widget_span"><img src="assets/images/icons/edit_materials.png" alt=""></span>
                         <span class="widget_span"><img src="assets/images/icons/color_tile_design.png" alt=""></span>
                         <span class="widget_span"><img src="assets/images/icons/save.png" alt=""></span>
                         <span class="widget_span"><img src="assets/images/icons/Add_somebody.png" alt=""></span>
@@ -373,9 +373,10 @@
                   <div class="col-2 bg-dark right-sidebar">
                      <div class="py-5">
                         <div>
-                           <span class="widget_span"><img src="assets/images/icons/Add_Shape.png" alt=""></span>
+                           
+                           <span type="button" data-toggle="modal" data-target="#frame_43" class="widget_span"><img src="assets/images/icons/Add_Shape.png" alt=""></span>
                            <span class="widget_span"><img src="assets/images/icons/Edit.png" alt=""></span>
-                           <span class="widget_span"><img src="assets/images/icons/duplicate.png" alt=""></span>
+                           <span type="button" data-toggle="modal" data-target="#import_another" class="widget_span"><img src="assets/images/icons/duplicate.png" alt=""></span>
                            <span class="widget_span"><img src="assets/images/icons/Automate.png" alt=""></span>
                            <span class="widget_span"><img src="assets/images/icons/Transition.png" alt=""></span>
                            <span class="widget_span"><img src="assets/images/icons/material_setting.png" alt=""></span>
@@ -552,90 +553,138 @@
       </div>
       <!-- main_settings Modal -->
       <div class="modal show" id="main_settings" tabindex="-1" aria-labelledby="main_settingsLabel" aria-hidden="true">
-      <div class="modal-dialog " style="width:600px;">
-      <div class="modal-content">
-      <div class="modal-header">
-      <h5 class="modal-title" id="main_settingsLabel">main_settings</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">
-      <img src="assets/images/icons/Multiply.png" alt="close" />
-      </span>
-      </button>
-      </div>
-      <div class="modal-body">
-      <div>
-      <form action="#">
-      <div class="form-group row">
-      <!-- Name -->
-      <div class="col-6 mt-3">
-      <div>
-      <label>Name</label>
-      </div>
-      <input type="text" class="w-100" placeholder="Insert here">
-      </div>
-      <!-- Series -->
-      <div class="col-6 mt-3">
-      <div>
-      <label>Series</label>
-      </div>
-      <input type="text" class="w-100" placeholder="Insert here">
-      </div>
-      <!-- Vendor -->
-      <div class="col-6 mt-3">
-      <div>
-      <label>Vendor</label>
-      </div>
-      <input type="text" class="w-100" placeholder="Insert here">
-      </div>
-      <!-- Color -->
-      <div class="col-6 mt-3">
-      <div>
-      <label>Color</label>
-      </div>
-      <input type="text" class="w-100" placeholder="Insert here">
-      </div>
-      <!-- Manufacture -->
-      <div class="col-6 mt-3">
-      <div>
-      <label>Manufacture</label>
-      </div>
-      <input type="text" class="w-100" placeholder="Insert here">
-      </div>
-      <!-- Installation Method -->
-      <div class="col-6 mt-3">
-      <div>
-      <label>Installation Method</label>
-      </div>
-      <input type="text" class="w-100" placeholder="Insert here">
-      </div>
-      <div class="col-12 my-3">
-      <img src="assets/images/flooring/enter_designer.png" alt="">
-      </div>
-      <div class="col-12">
-      <div class="row text-center">
-      <div class="col-3 p-0">
-      <button type="submit" class="btn btn-light m-0">Edit Color</button>
-      </div>
-      <div class="col-3 p-0">
-      <button type="submit" class="btn btn-light m-0">Edit Hatch</button>
-      </div>
-      <div class="col-3 p-0">
-      <button type="submit" class="btn btn-light m-0">Create Copy</button>
-      </div>
-      <div class="col-3 p-0">
-      <button type="submit" class="btn btn-light m-0">Delete</button>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div class="text-center mt-4">
-      <button type="submit" class="btn btn-light">Apply</button>
-      </div>
-      </form>
-      </div>
-      </div>
-      </div>
+         <div class="modal-dialog " style="width:600px;">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="main_settingsLabel">main_settings</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                  <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <div>
+                     <form action="#">
+                        <div class="form-group row">
+                           <!-- Name -->
+                           <div class="col-6 mt-3">
+                              <div>
+                                 <label>Name</label>
+                              </div>
+                              <input type="text" class="w-100" placeholder="Insert here">
+                           </div>
+                           <!-- Series -->
+                           <div class="col-6 mt-3">
+                              <div>
+                                 <label>Series</label>
+                              </div>
+                              <input type="text" class="w-100" placeholder="Insert here">
+                           </div>
+                           <!-- Vendor -->
+                           <div class="col-6 mt-3">
+                              <div>
+                                 <label>Vendor</label>
+                              </div>
+                              <input type="text" class="w-100" placeholder="Insert here">
+                           </div>
+                           <!-- Color -->
+                           <div class="col-6 mt-3">
+                              <div>
+                                 <label>Color</label>
+                              </div>
+                              <input type="text" class="w-100" placeholder="Insert here">
+                           </div>
+                           <!-- Manufacture -->
+                           <div class="col-6 mt-3">
+                              <div>
+                                 <label>Manufacture</label>
+                              </div>
+                              <input type="text" class="w-100" placeholder="Insert here">
+                           </div>
+                           <!-- Installation Method -->
+                           <div class="col-6 mt-3">
+                              <div>
+                                 <label>Installation Method</label>
+                              </div>
+                              <input type="text" class="w-100" placeholder="Insert here">
+                           </div>
+                           <div class="col-12 my-3">
+                              <img src="assets/images/flooring/enter_designer.png" alt="">
+                           </div>
+                           <div class="col-12">
+                              <div class="row text-center">
+                                 <div class="col-3 p-0">
+                                    <button type="submit" class="btn btn-light m-0">Edit Color</button>
+                                 </div>
+                                 <div class="col-3 p-0">
+                                    <button type="submit" class="btn btn-light m-0">Edit Hatch</button>
+                                 </div>
+                                 <div class="col-3 p-0">
+                                    <button type="submit" class="btn btn-light m-0">Create Copy</button>
+                                 </div>
+                                 <div class="col-3 p-0">
+                                    <button type="submit" class="btn btn-light m-0">Delete</button>
+                                 </div>
+                              </div>
+                           </div>
+
+                              <!-- Width -->
+                              <div class="col-4 mt-3">
+                                 <div>
+                                    <label>Width</label>
+                                 </div>
+                                 <input type="text" class="w-100" placeholder="Insert here">
+                              </div>
+                              <!-- Length-->
+                              <div class="col-4 mt-3">
+                                 <div>
+                                    <label>Length</label>
+                                 </div>
+                                 <input type="text" class="w-100" placeholder="Insert here">
+                              </div>
+                              <!-- Addition Waste-->
+                              <div class="col-4 mt-3">
+                                 <div>
+                                    <label>Addition Waste</label>
+                                 </div>
+                                 <input type="text" class="w-100" placeholder="Insert here">
+                              </div>
+
+                              <!-- Planks Per Box -->
+                              <div class="col-4 mt-3">
+                                 <div>
+                                    <label>Planks Per Box</label>
+                                 </div>
+                                 <input type="text" class="w-100" placeholder="Insert here">
+                              </div>
+                              <!-- Cuts Per Plank -->
+                              <div class="col-4 mt-3">
+                                 <div>
+                                    <label>Cuts Per Plank </label>
+                                 </div>
+                                 <input type="text" class="w-100" placeholder="Insert here">
+                              </div>
+                              <!-- Price Per Box-->
+                              <div class="col-4 mt-3">
+                                 <div>
+                                    <label>Price Per Box</label>
+                                 </div>
+                                 <input type="text" class="w-100" placeholder="Insert here">
+                              </div>
+
+                        </div>
+                  </div>
+                  <div class=" mt-4">
+                     <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Center_Material" value="Center Material to Room">
+                        <label class="form-check-label" for="Center_Material">Center Material to Room</label>
+                       </div>
+                  </div>
+                  </form>
+               </div>
+            </div>
+         </div>
       </div>
       </div>
       </div>
@@ -887,6 +936,190 @@
             </div>
          </div>
       </div>
+      <!-- import_another modal -->
+      <div class="modal fade" id="import_another" tabindex="-1" aria-labelledby="import_anotherLabel" aria-hidden="true"
+         data-backdrop="static" aria-hidden="true">
+         <div class="modal-dialog " style="width:356px; ">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                  <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+                  </button>
+               </div>
+               <div class="modal-body" style="min-height: 400px; justify-content: space-between;
+               display: flex;
+               flex-direction: column;">
+                  
+                  
+                  <div class="d-flex flex-column">
+                     <p class="text-center">Do you want to import another drawing your current?</p>
+                     <form action="#">
+
+                        <div class="form-group row">
+                           <div class="col-6 mt-3">
+                              <div>
+                                 <label for="fonts">Fonts</label>
+                              </div>
+                              <select class="modal-input modal-select">
+                                 <option selected>Times New Roman</option>
+                                 <option value="3">Sheet</option>
+                              </select>
+                           </div>
+                           <div class="col-6 mt-3">
+                              <div>
+                                 <label for="fonts">Fonts</label>
+                              </div>
+                              <select class="modal-input-sm modal-select">
+                                 <option selected>Times New Roman</option>
+                                 <option value="3">Sheet</option>
+                              </select>
+                           </div>
+
+                        </div>
+                        
+                     </form>
+                  </div>
+                  
+                  <div class="text-center mt-4">
+                     <button type="submit" class="btn btn-light">Apply</button>
+                  </div>
+
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- quantity modal -->
+      <div class="modal fade" id="quantity" tabindex="-1" aria-labelledby="quantityLabel" aria-hidden="true"
+         data-backdrop="static" aria-hidden="true">
+         <div class="modal-dialog " style="width:546px; ">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                  <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+                  </button>
+               </div>
+               <div class="modal-body" style="justify-content: space-between;
+               display: flex;
+               flex-direction: column;">
+                  
+                  
+                  <div class="d-flex flex-column">
+                     <p class="text-center">Please Specify how many rooms you want and enter the quantity in the box named “Quantity” then enter either the number of row or columns you want. Please note that this program will distribute th quantity requested by dividing it into the number of rows or columns requested.</p>
+                     <form action="#">
+
+                        <div class="form-group row">
+                           
+                        <!-- Quantity -->
+                        <div class="col-4 mt-3">
+                           <div>
+                              <label>Quantity</label>
+                           </div>
+                           <input type="text" class="w-100" placeholder="Insert here">
+                        </div>
+                        <!-- Row(s)-->
+                        <div class="col-4 mt-3">
+                           <div>
+                              <label>Row(s)</label>
+                           </div>
+                           <input type="text" class="w-100" placeholder="Insert here">
+                        </div>
+                        <!-- Column(s)-->
+                        <div class="col-4 mt-3">
+                           <div>
+                              <label>Column(s)</label>
+                           </div>
+                           <input type="text" class="w-100" placeholder="Insert here">
+                        </div>
+                        </div>
+                     </form>
+                  </div>
+                  
+                  <div class="text-center mt-4">
+                     <button type="submit" class="btn btn-light">Make Copy</button>
+                  </div>
+
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- frame_43 modal -->
+      <div class="modal fade" id="frame_43" tabindex="-1" aria-labelledby="frame_43Label" aria-hidden="true"
+         data-backdrop="static" aria-hidden="true">
+         <div class="modal-dialog " style="width:546px; ">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                  <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+                  </button>
+               </div>
+               <div class="modal-body" style="justify-content: space-between;
+               display: flex;
+               flex-direction: column;">
+                  
+                  
+                  <div class="d-flex flex-column text-center">
+                     <form action="#" >
+                        <div>
+                           <label for="frame_43_file"><img src="assets/images/flooring/frame_43.png" alt=""></label>
+                           <input type="file" id="frame_43_file" >
+                        </div>
+                     </form>
+                  </div>
+                  
+                  <div class="text-center mt-4">
+                     <button type="submit" class="btn btn-light">Apply</button>
+                  </div>
+
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- frame_43 modal -->
+      <div class="modal fade" id="frame_43" tabindex="-1" aria-labelledby="frame_43Label" aria-hidden="true"
+         data-backdrop="static" aria-hidden="true">
+         <div class="modal-dialog " style="width:546px; ">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                  <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+                  </button>
+               </div>
+               <div class="modal-body" style="justify-content: space-between;
+               display: flex;
+               flex-direction: column;">
+                  
+                  
+                  <div class="d-flex flex-column text-center">
+                     <form action="#" >
+                        <div>
+                           <label for="frame_43_file"><img src="assets/images/flooring/frame_43.png" alt=""></label>
+                           <input type="file" id="frame_43_file" >
+                        </div>
+                     </form>
+                  </div>
+                  
+                  <div class="text-center mt-4">
+                     <button type="submit" class="btn btn-light">Apply</button>
+                  </div>
+
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+
       <!-- chat modal -->
       <div class="modal fade chat" id="chat" tabindex="-1" aria-labelledby="chatLabel" aria-hidden="true"
          data-backdrop="static" aria-hidden="true">
@@ -899,7 +1132,7 @@
                   </span>
                   </button>
                </div>
-               <div class="modal-body" style="height: 400px;">
+               <div class="modal-body" style="height: 400px; ">
                   <form action="">
                      <div class="input-group">
                         <input type="search" class="form-control search" id="search" placeholder="Search">
@@ -909,13 +1142,35 @@
                   </form>
                   <div style=" height: 340px;">
                      <div class="notification">
-                        <div class="d-flex justify-content-between">
-                           <div class="media">
+                        <div class="d-flex justify-content-between  py-2">
+                           <div class="media  align-items-center">
                               <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
                                  alt="Not_Show">
-                              <div class="media-body">
-                                 <h5 class="mt-0">Media heading</h5>
-                                 <p>Will you do the same .</p>
+                              <div class="media-body>
+                                 <h5 class="mb-0">Media heading</h5>
+                                 <p class="mb-0">Will you do the same .</p>
+                              </div>
+                           </div>
+                           <p>sun</p>
+                        </div>
+                        <div class="d-flex justify-content-between  py-2">
+                           <div class="media  align-items-center">
+                              <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
+                                 alt="Not_Show">
+                              <div class="media-body>
+                                 <h5 class="mb-0">Media heading</h5>
+                                 <p class="mb-0">Will you do the same .</p>
+                              </div>
+                           </div>
+                           <p>sun</p>
+                        </div>
+                        <div class="d-flex justify-content-between  py-2">
+                           <div class="media  align-items-center">
+                              <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
+                                 alt="Not_Show">
+                              <div class="media-body>
+                                 <h5 class="mb-0">Media heading</h5>
+                                 <p class="mb-0">Will you do the same .</p>
                               </div>
                            </div>
                            <p>sun</p>
@@ -926,6 +1181,8 @@
             </div>
          </div>
       </div>
+
+
       </div>
       <!-- JavaScript -->
       <script src="assets/js/jquery-3.5.1.js"></script>
