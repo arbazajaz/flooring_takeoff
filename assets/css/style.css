@@ -41,6 +41,19 @@ ul {
 .bg-granite {
     background-color: #666666;
 }
+.scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #000;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 4px;
+    background-color: #000;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #cecccc;
+}
 
 header .form-input{
     border: 1px solid #2C2C2C80;
@@ -112,6 +125,12 @@ header .menu-item .btn{
 
 
 
+.widget_name{
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+
+}
 header .widget_btn{
     height: 35px;
     margin: 1px 0px;
@@ -157,9 +176,6 @@ header .collapsing {
 }
 .modal input{
     font-weight: bold;
-}
-.modal input{
-    /* max-height: 22px; */
 }
 .modal input::placeholder{
     font-weight: 100;
@@ -244,7 +260,7 @@ font-size: 15px;
 }
 .widget_span{
     display: block;
-    margin: 20px auto;
+    margin: 20px 0px;
     cursor: pointer;
     text-align: center;
 }
@@ -254,7 +270,11 @@ font-size: 15px;
 }
 .right-sidebar .widget_span{
     display: inline-block;
-    padding: 3px 14px;
+    padding: 3px;
+    margin: 10px 0px;
+}
+.right-sidebar .widget_name{
+    margin-bottom: 0px;
 }
 .c-form{
     z-index: 10;
@@ -277,4 +297,34 @@ font-size: 15px;
 }
 .chat .notification img{
     width: 40px;
+}
+.chat .notification .badge{
+    position: absolute;
+    left: 0px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 18px;
+    box-shadow: 4px 4px 24px 0px #00000073;
+    background: #414756;
+
+
+}
+
+.modal-body .item-group{
+    border : 1px solid #FFFFFF;
+    padding: 15px;
+}
+.modal-body .item label img{
+    padding-right: 10px;
+}
+.modal-body .item label{
+    border-bottom: 1px solid #FFFFFF;
+    padding: 3px;
+    padding-bottom: 10px;
+    display: block;
+}
+.modal-body .item .item-checkbox:checked + label{
+    background-color: #000000;
+    border: 1px solid #FFFFFF;
 }

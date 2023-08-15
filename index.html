@@ -1,555 +1,762 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- Required meta tags -->
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-      <!-- Favicon -->
-      <link rel="icon" href="assets/images/favicon.png" type="image/ico" sizes="16x16" />
-      <!-- Stylesheet -->
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link type="text/css" rel="stylesheet" href="assets/css/style.css">
-      <title></title>
-   </head>
-   <body>
-      <!-- header  -->
-      <header>
-         <div class="container-fluid">
-            <div class="row bg-white shadow">
-               <!-- Product name  -->
-               <div class="col-sm-6 pt-2">
-                  <div>
-                     <img src="assets/images/flooring/logo.png" alt="">
-                  </div>
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <!-- Favicon -->
+   <link rel="icon" href="assets/images/favicon.png" type="image/ico" sizes="16x16" />
+   <!-- Stylesheet -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+   <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+   <title></title>
+</head>
+
+<body>
+   <!-- header  -->
+   <header>
+      <div class="container-fluid">
+         <div class="row bg-white shadow">
+            <!-- Product name  -->
+            <div class="col-sm-6 pt-2">
+               <div>
+                  <img src="assets/images/flooring/logo.png" alt="">
                </div>
-               <!-- close minimise fullscreen icons  -->
-               <div class="col-sm-6 text-right">
-                  <div class="d-flex justify-content-end">
-                     <!-- minimise icon  -->
-                     <a class="btn" href="#"><img src="assets/images/icons/minimize.png" alt="minimise" /></a>
-                     <!-- close icon  -->
-                     <a class="btn" href="#"><img src="assets/images/icons/fullscreen.png" alt="fullscreen" /></a>
-                     <!-- close icon  -->
-                     <a class="btn" href="#"><img src="assets/images/icons/Multiply.png" alt="close" /></a>
-                  </div>
-               </div>
-               <!-- top navigation menu -->
-               <div class="col-12 pt-3 pb-2">
-                  <div class="accordion d-flex" id="menu_accordian">
-                     <!-- File -->
-                     <div class="menu-item">
-                        <div id="menuFile">
-                           <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#file_menu"
-                              aria-expanded="true" aria-controls="file_menu">
-                           File
-                           </button>
-                        </div>
-                        <div id="file_menu" class="collapse open-menu" aria-labelledby="menuFile"
-                           data-parent="#menu_accordian">
-                           <div class="card">
-                              <div>
-                                 <a class="dropdown-item" href="#">
-                                    <div class="short_key">
-                                       <p>Undo</p>
-                                       <p>Ctrl+Z</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item disabled" href="#">
-                                    <div class="short_key">
-                                       <p>Redo</p>
-                                       <p>Ctrl+Z</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item" href="#">Suspend Undo</a>
-                                 <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
-                                 points)</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- Edit -->
-                     <div class="menu-item">
-                        <div id="menuEdit">
-                           <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#edit_menu"
-                              aria-expanded="false" aria-controls="edit_menu">
-                           Edit
-                           </button>
-                        </div>
-                        <div id="edit_menu" class="collapse" aria-labelledby="menuEdit" data-parent="#menu_accordian">
-                           <div class="card open-menu">
-                              <div>
-                                 <a class="dropdown-item" href="#">
-                                    <div class="short_key">
-                                       <p>Undo</p>
-                                       <p>Ctrl+Z</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item disabled" href="#">
-                                    <div class="short_key">
-                                       <p>Redo</p>
-                                       <p>Ctrl+Z</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item" href="#">Suspend Undo</a>
-                                 <a class="dropdown-item" href="#">Floorplan Settings...</a>
-                                 <a class="dropdown-item" href="#">
-                                    <div class="short_key">
-                                       <p>Room Settings</p>
-                                       <p>F2</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item" href="#">
-                                    <div class="short_key">
-                                       <p>File Pile Directions</p>
-                                       <p>Shift+F2</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item" href="#">
-                                    <div class="short_key">
-                                       <p>Materials</p>
-                                       <p>F3</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item disabled" href="#">Cross Measures</a>
-                                 <a class="dropdown-item" href="#">Room Rules...</a>
-                                 <a class="dropdown-item" href="#">Re-scale from two drawing points</a>
-                                 <a class="dropdown-item" href="#">
-                                    <div class="short_key">
-                                       <p>Border Settings...</p>
-                                       <p>Alt+F3</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item" href="#">Use Selected wall as start wall</a>
-                                 <a class="dropdown-item" href="#">use pile direction globally from selected wall</a>
-                                 <a class="dropdown-item" href="#">Re-scale to achieve a wall length...</a>
-                                 <a class="dropdown-item" href="#">Scale XY...</a>
-                                 <a class="dropdown-item" href="#">Expand, square up and copy room...</a>
-                                 <a class="dropdown-item" href="#">
-                                    <div class="short_key">
-                                       <p>Copy</p>
-                                       <p>Ctrl+C</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item" href="#">
-                                    <div class="short_key">
-                                       <p>Copy</p>
-                                       <p>Ctrl+C</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item" href="#">
-                                    <div class="short_key">
-                                       <p>Paste</p>
-                                       <p>Ctrl+V</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item" href="#">
-                                    <div class="short_key">
-                                       <p>Delete</p>
-                                       <p>Del</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item disabled" href="#">
-                                    <div class="short_key">
-                                       <p>Find a Room</p>
-                                       <p>#</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item" href="#">Duplicate Room</a>
-                                 <a class="dropdown-item" href="#">
-                                    <div class="short_key">
-                                       <p>Move Room</p>
-                                       <p>Ctrl+M</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item" href="#">Move plan by complete board size</a>
-                                 <a class="dropdown-item" href="#">
-                                    <div class="short_key">
-                                       <p>Split Room</p>
-                                       <p>Ctrl+F5</p>
-                                    </div>
-                                 </a>
-                                 <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
-                                 points)</a>
-                                 <a class="dropdown-item disabled" href="#">Convert Corner to Arc</a>
-                                 <a class="dropdown-item disabled" href="#">Convert Triangular Room to Circle</a>
-                                 <a class="dropdown-item" href="#">Convert Rectangular Room to Ellipse</a>
-                                 <a class="dropdown-item" href="#">Convert Room to 'Open Track'</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- TilePaint -->
-                     <div class="menu-item">
-                        <div id="menuTilepaint">
-                           <button class="btn  collapsed" type="button" data-toggle="collapse"
-                              data-target="#tilepaint_menu" aria-expanded="false" aria-controls="tilepaint_menu">
-                           TilePaint
-                           </button>
-                        </div>
-                        <div id="tilepaint_menu" class="collapse" aria-labelledby="menuTilepaint"
-                           data-parent="#menu_accordian">
-                           <div class="card open-menu">
-                              <div>
-                                 <a class="dropdown-item" href="#">Suspend Undo</a>
-                                 <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
-                                 points)</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- Draw -->
-                     <div class="menu-item">
-                        <div id="menuDraw">
-                           <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#draw_menu"
-                              aria-expanded="false" aria-controls="draw_menu">
-                           Draw
-                           </button>
-                        </div>
-                        <div id="draw_menu" class="collapse" aria-labelledby="menuDraw" data-parent="#menu_accordian">
-                           <div class="card open-menu">
-                              <div>
-                                 <a class="dropdown-item" href="#">Suspend Undo</a>
-                                 <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
-                                 points)</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- Layout -->
-                     <div class="menu-item">
-                        <div id="menuLayout">
-                           <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#layout__menu"
-                              aria-expanded="false" aria-controls="layout__menu">
-                           Layout
-                           </button>
-                        </div>
-                        <div id="layout__menu" class="collapse" aria-labelledby="menuLayout" data-parent="#menu_accordian">
-                           <div class="card open-menu">
-                              <div>
-                                 <a class="dropdown-item" href="#">Suspend Undo</a>
-                                 <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
-                                 points)</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- Background -->
-                     <div class="menu-item">
-                        <div id="menuBackground">
-                           <button class="btn  collapsed" type="button" data-toggle="collapse"
-                              data-target="#background_menu" aria-expanded="false" aria-controls="background_menu">
-                           Background
-                           </button>
-                        </div>
-                        <div id="background_menu" class="collapse" aria-labelledby="menuBackground"
-                           data-parent="#menu_accordian">
-                           <div class="card open-menu">
-                              <div>
-                                 <a class="dropdown-item" href="#">Suspend Undo</a>
-                                 <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
-                                 points)</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- View -->
-                     <div class="menu-item">
-                        <div id="menuView">
-                           <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#view_menu"
-                              aria-expanded="false" aria-controls="view_menu">
-                           View
-                           </button>
-                        </div>
-                        <div id="view_menu" class="collapse" aria-labelledby="menuView" data-parent="#menu_accordian">
-                           <div class="card open-menu">
-                              <div>
-                                 <a class="dropdown-item" href="#">Suspend Undo</a>
-                                 <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
-                                 points)</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- Quantify -->
-                     <div class="menu-item">
-                        <div id="menuQuantify">
-                           <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#Quantify_menu"
-                              aria-expanded="false" aria-controls="Quantify_menu">
-                           Quantify
-                           </button>
-                        </div>
-                        <div id="Quantify_menu" class="collapse" aria-labelledby="menuQuantify"
-                           data-parent="#menu_accordian">
-                           <div class="card open-menu">
-                              <div>
-                                 <a class="dropdown-item" href="#">Suspend Undo</a>
-                                 <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
-                                 points)</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- Help -->
-                     <div class="menu-item">
-                        <div id="menuHelp">
-                           <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#help_menu"
-                              aria-expanded="false" aria-controls="help_menu">
-                           Help
-                           </button>
-                        </div>
-                        <div id="help_menu" class="collapse" aria-labelledby="menuHelp" data-parent="#menu_accordian">
-                           <div class="card open-menu">
-                              <div>
-                                 <a class="dropdown-item" href="#">Suspend Undo</a>
-                                 <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
-                                 points)</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!-- end top navigation menu  -->
             </div>
-            <!-- widgets row  -->
-            <div class="row justify-content-center position-relative">
-               <div class="col-12 col-sm-7 py-3 bg-dark position-absolute c-form">
+            <!-- close minimise fullscreen icons  -->
+            <div class="col-sm-6 text-right">
+               <div class="d-flex justify-content-end">
+                  <!-- minimise icon  -->
+                  <a class="btn" href="#"><img src="assets/images/icons/minimize.png" alt="minimise" /></a>
+                  <!-- close icon  -->
+                  <a class="btn" href="#"><img src="assets/images/icons/fullscreen.png" alt="fullscreen" /></a>
+                  <!-- close icon  -->
+                  <a class="btn" href="#"><img src="assets/images/icons/Multiply.png" alt="close" /></a>
+               </div>
+            </div>
+            <!-- top navigation menu -->
+            <div class="col-12 pt-3 pb-2">
+               <div class="accordion d-flex" id="menu_accordian">
+                  <!-- File -->
+                  <div class="menu-item">
+                     <div id="menuFile">
+                        <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#file_menu"
+                           aria-expanded="true" aria-controls="file_menu">
+                           File
+                        </button>
+                     </div>
+                     <div id="file_menu" class="collapse open-menu" aria-labelledby="menuFile"
+                        data-parent="#menu_accordian">
+                        <div class="card">
+                           <div>
+                              <a class="dropdown-item" href="#">
+                                 <div class="short_key">
+                                    <p>Undo</p>
+                                    <p>Ctrl+Z</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item disabled" href="#">
+                                 <div class="short_key">
+                                    <p>Redo</p>
+                                    <p>Ctrl+Z</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item" href="#">Suspend Undo</a>
+                              <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
+                                 points)</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Edit -->
+                  <div class="menu-item">
+                     <div id="menuEdit">
+                        <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#edit_menu"
+                           aria-expanded="false" aria-controls="edit_menu">
+                           Edit
+                        </button>
+                     </div>
+                     <div id="edit_menu" class="collapse" aria-labelledby="menuEdit" data-parent="#menu_accordian">
+                        <div class="card open-menu">
+                           <div>
+                              <a class="dropdown-item" href="#">
+                                 <div class="short_key">
+                                    <p>Undo</p>
+                                    <p>Ctrl+Z</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item disabled" href="#">
+                                 <div class="short_key">
+                                    <p>Redo</p>
+                                    <p>Ctrl+Z</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item" href="#">Suspend Undo</a>
+                              <a class="dropdown-item" href="#">Floorplan Settings...</a>
+                              <a class="dropdown-item" href="#">
+                                 <div class="short_key">
+                                    <p>Room Settings</p>
+                                    <p>F2</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                 <div class="short_key">
+                                    <p>File Pile Directions</p>
+                                    <p>Shift+F2</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                 <div class="short_key">
+                                    <p>Materials</p>
+                                    <p>F3</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item disabled" href="#">Cross Measures</a>
+                              <a class="dropdown-item" href="#">Room Rules...</a>
+                              <a class="dropdown-item" href="#">Re-scale from two drawing points</a>
+                              <a class="dropdown-item" href="#">
+                                 <div class="short_key">
+                                    <p>Border Settings...</p>
+                                    <p>Alt+F3</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item" href="#">Use Selected wall as start wall</a>
+                              <a class="dropdown-item" href="#">use pile direction globally from selected wall</a>
+                              <a class="dropdown-item" href="#">Re-scale to achieve a wall length...</a>
+                              <a class="dropdown-item" href="#">Scale XY...</a>
+                              <a class="dropdown-item" href="#">Expand, square up and copy room...</a>
+                              <a class="dropdown-item" href="#">
+                                 <div class="short_key">
+                                    <p>Copy</p>
+                                    <p>Ctrl+C</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                 <div class="short_key">
+                                    <p>Copy</p>
+                                    <p>Ctrl+C</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                 <div class="short_key">
+                                    <p>Paste</p>
+                                    <p>Ctrl+V</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                 <div class="short_key">
+                                    <p>Delete</p>
+                                    <p>Del</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item disabled" href="#">
+                                 <div class="short_key">
+                                    <p>Find a Room</p>
+                                    <p>#</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item" href="#">Duplicate Room</a>
+                              <a class="dropdown-item" href="#">
+                                 <div class="short_key">
+                                    <p>Move Room</p>
+                                    <p>Ctrl+M</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item" href="#">Move plan by complete board size</a>
+                              <a class="dropdown-item" href="#">
+                                 <div class="short_key">
+                                    <p>Split Room</p>
+                                    <p>Ctrl+F5</p>
+                                 </div>
+                              </a>
+                              <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
+                                 points)</a>
+                              <a class="dropdown-item disabled" href="#">Convert Corner to Arc</a>
+                              <a class="dropdown-item disabled" href="#">Convert Triangular Room to Circle</a>
+                              <a class="dropdown-item" href="#">Convert Rectangular Room to Ellipse</a>
+                              <a class="dropdown-item" href="#">Convert Room to 'Open Track'</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- TilePaint -->
+                  <div class="menu-item">
+                     <div id="menuTilepaint">
+                        <button class="btn  collapsed" type="button" data-toggle="collapse"
+                           data-target="#tilepaint_menu" aria-expanded="false" aria-controls="tilepaint_menu">
+                           TilePaint
+                        </button>
+                     </div>
+                     <div id="tilepaint_menu" class="collapse" aria-labelledby="menuTilepaint"
+                        data-parent="#menu_accordian">
+                        <div class="card open-menu">
+                           <div>
+                              <a class="dropdown-item" href="#">Suspend Undo</a>
+                              <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
+                                 points)</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Draw -->
+                  <div class="menu-item">
+                     <div id="menuDraw">
+                        <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#draw_menu"
+                           aria-expanded="false" aria-controls="draw_menu">
+                           Draw
+                        </button>
+                     </div>
+                     <div id="draw_menu" class="collapse" aria-labelledby="menuDraw" data-parent="#menu_accordian">
+                        <div class="card open-menu">
+                           <div>
+                              <a class="dropdown-item" href="#">Suspend Undo</a>
+                              <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
+                                 points)</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Layout -->
+                  <div class="menu-item">
+                     <div id="menuLayout">
+                        <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#layout__menu"
+                           aria-expanded="false" aria-controls="layout__menu">
+                           Layout
+                        </button>
+                     </div>
+                     <div id="layout__menu" class="collapse" aria-labelledby="menuLayout" data-parent="#menu_accordian">
+                        <div class="card open-menu">
+                           <div>
+                              <a class="dropdown-item" href="#">Suspend Undo</a>
+                              <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
+                                 points)</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Background -->
+                  <div class="menu-item">
+                     <div id="menuBackground">
+                        <button class="btn  collapsed" type="button" data-toggle="collapse"
+                           data-target="#background_menu" aria-expanded="false" aria-controls="background_menu">
+                           Background
+                        </button>
+                     </div>
+                     <div id="background_menu" class="collapse" aria-labelledby="menuBackground"
+                        data-parent="#menu_accordian">
+                        <div class="card open-menu">
+                           <div>
+                              <a class="dropdown-item" href="#">Suspend Undo</a>
+                              <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
+                                 points)</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- View -->
+                  <div class="menu-item">
+                     <div id="menuView">
+                        <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#view_menu"
+                           aria-expanded="false" aria-controls="view_menu">
+                           View
+                        </button>
+                     </div>
+                     <div id="view_menu" class="collapse" aria-labelledby="menuView" data-parent="#menu_accordian">
+                        <div class="card open-menu">
+                           <div>
+                              <a class="dropdown-item" href="#">Suspend Undo</a>
+                              <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
+                                 points)</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Quantify -->
+                  <div class="menu-item">
+                     <div id="menuQuantify">
+                        <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#Quantify_menu"
+                           aria-expanded="false" aria-controls="Quantify_menu">
+                           Quantify
+                        </button>
+                     </div>
+                     <div id="Quantify_menu" class="collapse" aria-labelledby="menuQuantify"
+                        data-parent="#menu_accordian">
+                        <div class="card open-menu">
+                           <div>
+                              <a class="dropdown-item" href="#">Suspend Undo</a>
+                              <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
+                                 points)</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Help -->
+                  <div class="menu-item">
+                     <div id="menuHelp">
+                        <button class="btn  collapsed" type="button" data-toggle="collapse" data-target="#help_menu"
+                           aria-expanded="false" aria-controls="help_menu">
+                           Help
+                        </button>
+                     </div>
+                     <div id="help_menu" class="collapse" aria-labelledby="menuHelp" data-parent="#menu_accordian">
+                        <div class="card open-menu">
+                           <div>
+                              <a class="dropdown-item" href="#">Suspend Undo</a>
+                              <a class="dropdown-item" href="#">Merge two existing rooms into one(using 4 selection
+                                 points)</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- end top navigation menu  -->
+         </div>
+         <!-- widgets row  -->
+         <div class="row justify-content-center position-relative">
+            <div class="col-12 col-sm-7 py-3 bg-dark position-absolute c-form">
+               <div>
+                  <form class="form-inline d-flex" action="#">
+                     <!-- Net  -->
+                     <label for="net">Net</label>
+                     <input id="net" type="text" class="form-input" />
+                     <!-- Net  -->
+                     <label for="perim">Perim</label>
+                     <input id="perim" type="text" class="form-input" />
+                     <select class="ml-4">
+                        <option selected>NONE</option>
+                        <option value="1">CPT-1 2' Carpet Tile,TBD</option>
+                        <option value="2">LVT-1 6'*48' Luxury Vinyl Flooring, TBD</option>
+                        <option value="3">PT-1 2'*1' Porcelain Tile, TBD</option>
+                        <option value="3">VB-1 4' Johnsonite Vinyl Base, TBD</option>
+                        <option value="3">TB-1 6' Tall Porcelain Tile Base, TBD</option>
+                        <option value="3">Transition Strip</option>
+                        <option value="3">Sheet</option>
+                     </select>
+                     <!-- Gross   -->
+                     <label for="gross">Gross </label>
+                     <input id="gross" type="text" class="form-input" />
+                     <!-- Waste  -->
+                     <label for="waste">Waste</label>
+                     <input id="waste" type="text" class="form-input" />
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- main -->
+   <main>
+      <section>
+         <div class="container-fluid">
+            <div class="row min-vh-100">
+               <div class="col-1 left-sidebar">
+                  <div class="w-60 bg-dark py-5 h-100">
+                     <!-- New -->
+                     <span type="button" data-toggle="modal" data-target="#new_project" class="widget_span"><img
+                           src="assets/images/icons/new.png" alt="">
+                        <p class="widget_name">New</p>
+                     </span>
+
+                     <!-- Start Working -->
+                     <span title="Start Working" class="widget_span"><img src="assets/images/icons/Start working.png"
+                           alt="">
+                        <p class="widget_name">Start Working</p>
+                     </span>
+
+                     <!-- Add Drawing -->
+                     <span type="button" data-toggle="modal" data-target="#frame_48"  class="widget_span"><img src="assets/images/icons/Add_File.png" alt="">
+                        <p class="widget_name">Add Drawing</p>
+                     </span>
+
+                     <!-- Edit Drawing -->
+                     <span type="button" data-toggle="modal" data-target="#quantity" class="widget_span"><img
+                           src="assets/images/icons/edit_materials.png" alt="">
+                        <p class="widget_name">Edit Drawing</p>
+                     </span>
+
+                     <!-- Tile Design -->
+                     <span class="widget_span"><img src="assets/images/icons/color_tile_design.png" alt="">
+                        <p class="widget_name">Tile Design</p>
+                     </span>
+
+                     <!-- Save -->
+                     <span class="widget_span"><img src="assets/images/icons/save.png" alt="">
+                        <p class="widget_name">Save</p>
+                     </span>
+
+                     <!-- Invite -->
+                     <span type="button" data-toggle="modal" data-target="#invite" class="widget_span"><img
+                           src="assets/images/icons/Add_somebody.png" alt="">
+                        <p class="widget_name">Invite</p>
+                     </span>
+
+                     <!-- Rescale -->
+                     <span class="widget_span"><img src="assets/images/icons/full_screen.png" alt="">
+                        <p class="widget_name">Rescale</p>
+                     </span>
+
+                     <!-- Track Work -->
+                     <span class="widget_span"><img src="assets/images/icons/Track_time.png" alt="">
+                        <p class="widget_name">Track Work</p>
+                     </span>
+
+                     <!-- Work_report -->
+                     <span type="button" data-toggle="modal" data-target="#chat" class="widget_span"><img
+                           src="assets/images/icons/Work_report.png" alt="">
+                        <p class="widget_name">Work Report</p>
+                     </span>
+                     <!-- Message -->
+                     <span type="button" data-toggle="modal" data-target="#chat" class="widget_span"><img
+                           src="assets/images/icons/Send_message.png" alt="">
+                        <p class="widget_name">Message</p>
+                     </span>
+
+                     <!-- Mail -->
+                     <span class="widget_span"><img src="assets/images/icons/mail.png" alt="">
+                        <p class="widget_name">Mail</p>
+                     </span>
+                  </div>
+               </div>
+               <div class="col-9">
+               </div>
+               <div class="col-2 bg-dark right-sidebar">
+                  <div class="py-5">
+                     <div>
+                        <div class="row">
+                           <!-- Add Shape -->
+                           <span type="button" data-toggle="modal" data-target="#frame_43" class="widget_span col-md-4"><img
+                                 src="assets/images/icons/Add_Shape.png" alt="">
+                              <p class="widget_name">Add Shape</p>
+                           </span>
+                           <!-- Re Scale -->
+                           <span class="widget_span col-md-4"><img src="assets/images/icons/re_scale.png" alt="">
+                              <p class="widget_name">Re Scale</p>
+                           </span>
+                           <!-- Split -->
+                           <span class="widget_span col-md-4"><img src="assets/images/icons/Edit.png" alt="">
+                              <p class="widget_name">Split</p>
+                           </span>
+                           <!-- Multiply Draw -->
+                           <span type="button" data-toggle="modal" data-target="#import_another" class="widget_span col-md-4"><img
+                                 src="assets/images/icons/duplicate.png" alt="">
+                              <p class="widget_name">Multiply Draw</p>
+                           </span>
+                           <!-- Automatic -->
+                           <span class="widget_span col-md-4"><img src="assets/images/icons/Automate.png" alt="">
+                              <p class="widget_name">Automatic</p>
+                           </span>
+                           <!-- Add Base -->
+                           <span class="widget_span col-md-4"><img src="assets/images/icons/Transition.png" alt="">
+                              <p class="widget_name">Add Base</p>
+                           </span>
+                           <!-- Material Setting -->
+                           <span class="widget_span col-md-4"><img src="assets/images/icons/material_setting.png" alt="">
+                              <p class="widget_name">Material Setting</p>
+                           </span>
+                           <!-- Add Door -->
+                           <span type="button" data-toggle="modal" data-target="#rescale" class="widget_span col-md-4"><img
+                                 src="assets/images/icons/Add_door.png" alt="">
+                              <p class="widget_name">Add Door</p>
+                           </span>
+                           <!-- Add Stair -->
+                           <span type="button" data-toggle="modal" data-target="#add_stair" class="widget_span col-md-4"><img
+                                 src="assets/images/icons/Add_stair.png" alt="">
+                              <p class="widget_name">Add Stair</p>
+                           </span>
+                           <!-- Split Room -->
+                           <span type="button" data-toggle="modal" data-target="#rescale" class="widget_span col-md-4"><img
+                                 src="assets/images/icons/Split_room.png" alt="">
+                              <p class="widget_name">Split Room</p>
+                           </span>
+   
+                           <!-- Border -->
+                           <span type="button" data-toggle="modal" data-target="#border_settings" class="widget_span col-md-4"><img
+                                 src="assets/images/icons/border.png" alt="">
+                              <p class="widget_name">Border</p>
+                           </span>
+                           <!-- Room Setting -->
+                           <span class="widget_span col-md-4"><img src="assets/images/icons/room_setting.png" alt="">
+                              <p class="widget_name">Room Setting</p>
+                           </span>
+                           <!-- Add Text -->
+                           <span type="button" data-toggle="modal" data-target="#add_text"  class="widget_span col-md-4"><img src="assets/images/icons/Add_text.png" alt="">
+                              <p class="widget_name">Add Text</p>
+                           </span>
+   
+                           <!-- Add Walls -->
+                           <span class="widget_span col-md-4"><img src="assets/images/icons/Add_walls.png" alt="">
+                              <p class="widget_name">Add Walls</p>
+                           </span>
+                           
+                           <!-- Show seam -->
+                           <span type="button" data-toggle="modal" data-target="#" class="widget_span col-md-4"><img
+                              src="assets/images/icons/show_seam.png" alt="">
+                           <p class="widget_name">Show seam</p>
+                        </span>
+                           <!-- Count Item -->
+                           <span type="button" data-toggle="modal" data-target="#count_item" class="widget_span col-md-4"><img
+                              src="assets/images/icons/count_item.png" alt="">
+                           <p class="widget_name">Count Item</p>
+                        </span>
+                              <!-- 3D -->
+                              <span type="button" data-toggle="modal" data-target="#main_settings" class="widget_span col-md-4"><img
+                                 src="assets/images/icons/3D.png" alt="">
+                              <p class="widget_name">3D</p>
+                           </span>
+                           <!-- Main Setting -->
+                           <span type="button" data-toggle="modal" data-target="#main_settings" class="widget_span col-md-4"><img
+                                 src="assets/images/icons/main_setting.png" alt="">
+                              <p class="widget_name">Main Setting</p>
+                           </span>
+                           <!-- Printer -->
+                           <span class="widget_span col-md-4 mr-auto"><img src="assets/images/icons/print.png" alt="">
+                              <p class="widget_name">Printer</p>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+      </section>
+   </main>
+   <!-- modals  -->
+   <div>
+      <!-- door_parameters Modal -->
+      <div class="modal fade" id="door_parameters" tabindex="-1" aria-labelledby="door_parametersLabel"
+         aria-hidden="true">
+         <div class="modal-dialog " style="width:357px;">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="door_parametersLabel">Door Parameters</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">
+                        <img src="assets/images/icons/Multiply.png" alt="close" />
+                     </span>
+                  </button>
+               </div>
+               <div class="modal-body">
                   <div>
-                     <form class="form-inline d-flex" action="#">
-                        <!-- Net  -->
-                        <label for="net">Net</label>
-                        <input id="net" type="text" class="form-input" />
-                        <!-- Net  -->
-                        <label for="perim">Perim</label>
-                        <input id="perim" type="text" class="form-input" />
-                        <select class="ml-4">
-                           <option selected>NONE</option>
-                           <option value="1">CPT-1 2' Carpet Tile,TBD</option>
-                           <option value="2">LVT-1 6'*48' Luxury Vinyl Flooring, TBD</option>
-                           <option value="3">PT-1 2'*1' Porcelain Tile, TBD</option>
-                           <option value="3">VB-1 4' Johnsonite Vinyl Base, TBD</option>
-                           <option value="3">TB-1 6' Tall Porcelain Tile Base, TBD</option>
-                           <option value="3">Transition Strip</option>
-                           <option value="3">Sheet</option>
-                        </select>
-                        <!-- Gross   -->
-                        <label for="gross">Gross </label>
-                        <input id="gross" type="text" class="form-input" />
-                        <!-- Waste  -->
-                        <label for="waste">Waste</label>
-                        <input id="waste" type="text" class="form-input" />
+                     <form action="#">
+                        <!-- door_width  -->
+                        <div class="form-group row">
+                           <label for="door_width" class="col-sm-5">Door Width</label>
+                           <div class="col-sm-7">
+                              <input type="text" class="modal-input" id="door_width">
+                           </div>
+                        </div>
+                        <!-- drop_back_size  -->
+                        <div class="form-group row">
+                           <label for="drop_back_size" class="col-sm-5">Drop back size</label>
+                           <div class="col-sm-7">
+                              <input type="text" class="modal-input" id="drop_back_size">
+                           </div>
+                        </div>
+                        <!-- drop_back_size  -->
+                        <div class="form-group row justify-content-end">
+                           <div class="col-sm-8">
+                              <div class="d-flex align-content-center justify-content-end">
+                                 <input type="checkbox" class="modal-input mr-2" id="original_door_method">
+                                 <label for="original_door_method" class="mb-0">Original door method</label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="text-center">
+                           <button type="button" class="btn btn-light">Ok</button>
+                           <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                        </div>
                      </form>
                   </div>
                </div>
             </div>
          </div>
-      </header>
-      <!-- main -->
-      <main>
-         <section>
-            <div class="container-fluid">
-               <div class="row min-vh-100">
-                  <div class="col-1 left-sidebar">
-                     <div class="w-60 bg-dark py-5 h-100">
-                        <span type="button" data-toggle="modal" data-target="#frame_38" class="widget_span"><img
-                           src="assets/images/icons/new.png" alt=""></span>
-                        <span title="Start Working" class="widget_span"><img src="assets/images/icons/Start working.png"
-                           alt=""></span>
-                        <span class="widget_span"><img src="assets/images/icons/Add_File.png" alt=""></span>
-                        <span type="button" data-toggle="modal" data-target="#quantity"  class="widget_span"><img src="assets/images/icons/edit_materials.png" alt=""></span>
-                        <span class="widget_span"><img src="assets/images/icons/color_tile_design.png" alt=""></span>
-                        <span class="widget_span"><img src="assets/images/icons/save.png" alt=""></span>
-                        <span class="widget_span"><img src="assets/images/icons/Add_somebody.png" alt=""></span>
-                        <span class="widget_span"><img src="assets/images/icons/full_screen.png" alt=""></span>
-                        <span class="widget_span"><img src="assets/images/icons/Track_time.png" alt=""></span>
-                        <span type="button" data-toggle="modal" data-target="#chat" class="widget_span"><img
-                           src="assets/images/icons/Send_message.png" alt=""></span>
-                        <span class="widget_span"><img src="assets/images/icons/mail.png" alt=""></span>
-                     </div>
-                  </div>
-                  <div class="col-9">
-                  </div>
-                  <div class="col-2 bg-dark right-sidebar">
-                     <div class="py-5">
-                        <div>
-                           
-                           <span type="button" data-toggle="modal" data-target="#frame_43" class="widget_span"><img src="assets/images/icons/Add_Shape.png" alt=""></span>
-                           <span class="widget_span"><img src="assets/images/icons/Edit.png" alt=""></span>
-                           <span type="button" data-toggle="modal" data-target="#import_another" class="widget_span"><img src="assets/images/icons/duplicate.png" alt=""></span>
-                           <span class="widget_span"><img src="assets/images/icons/Automate.png" alt=""></span>
-                           <span class="widget_span"><img src="assets/images/icons/Transition.png" alt=""></span>
-                           <span class="widget_span"><img src="assets/images/icons/material_setting.png" alt=""></span>
-                           <span type="button" data-toggle="modal" data-target="#rescale" class="widget_span"><img
-                              src="assets/images/icons/Add_door.png" alt=""></span>
-                           <span type="button" data-toggle="modal" data-target="#border_settings" class="widget_span"><img
-                              src="assets/images/icons/border.png" alt=""></span>
-                           <span class="widget_span"><img src="assets/images/icons/room_setting.png" alt=""></span>
-                           <span class="widget_span"><img src="assets/images/icons/Add_text.png" alt=""></span>
-                           <span class="widget_span"><img src="assets/images/icons/show_seam.png" alt=""></span>
-                           <span class="widget_span"><img src="assets/images/icons/Add_walls.png" alt=""></span>
-                           <span type="button" data-toggle="modal" data-target="#main_settings" class="widget_span"><img
-                              src="assets/images/icons/main_setting.png" alt=""></span>
-                           <span class="widget_span"><img src="assets/images/icons/print.png" alt=""></span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-         </section>
-      </main>
-      <!-- modals  -->
-      <div>
-      <!-- door_parameters Modal -->
-      <div class="modal fade" id="door_parameters" tabindex="-1" aria-labelledby="door_parametersLabel"
-         aria-hidden="true">
-      <div class="modal-dialog " style="width:357px;">
-      <div class="modal-content">
-      <div class="modal-header">
-      <h5 class="modal-title" id="door_parametersLabel">Door Parameters</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">
-      <img src="assets/images/icons/Multiply.png" alt="close" />
-      </span>
-      </button>
-      </div>
-      <div class="modal-body">
-      <div>
-      <form action="#">
-      <!-- door_width  -->
-      <div class="form-group row">
-      <label for="door_width" class="col-sm-5">Door Width</label>
-      <div class="col-sm-7">
-      <input type="text" class="modal-input" id="door_width">
-      </div>
-      </div>
-      <!-- drop_back_size  -->
-      <div class="form-group row">
-      <label for="drop_back_size" class="col-sm-5">Drop back size</label>
-      <div class="col-sm-7">
-      <input type="text" class="modal-input" id="drop_back_size">
-      </div>
-      </div>
-      <!-- drop_back_size  -->
-      <div class="form-group row justify-content-end">
-      <div class="col-sm-8">
-      <div class="d-flex align-content-center justify-content-end">
-      <input type="checkbox" class="modal-input mr-2" id="original_door_method">
-      <label for="original_door_method" class="mb-0">Original door method</label>
-      </div>
-      </div>
-      </div>
-      <div class="text-center">
-      <button type="button" class="btn btn-light">Ok</button>
-      <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-      </div>
-      </form>
-      </div>
-      </div>
-      </div>
-      </div>
       </div>
       <!-- rescale Modal -->
       <div class="modal show" id="rescale" tabindex="-1" aria-labelledby="rescaleLabel" aria-hidden="true">
-      <div class="modal-dialog " style="width:420px;">
-      <div class="modal-content">
-      <div class="modal-header">
-      <h5 class="modal-title" id="plan_settingsLabel">Plan Settings</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">
-      <img src="assets/images/icons/Multiply.png" alt="close" />
-      </span>
-      </button>
+         <div class="modal-dialog " style="width:420px;">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="plan_settingsLabel">Plan Settings</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">
+                        <img src="assets/images/icons/Multiply.png" alt="close" />
+                     </span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <div>
+                     <div class="text-center">
+                        <img src="assets/images/flooring/door.png" alt="">
+                     </div>
+                     <form action="#">
+                        <div class="form-group row">
+                        </div>
+                        <div class="form-group row">
+                           <div class="col-6 mt-3">
+                              <div>
+                                 <label for="door_legnth">Length of Door</label>
+                              </div>
+                              <input type="text" class="modal-input" id="door_legnth" placeholder="Insert here">
+                           </div>
+                           <div class="col-6 mt-3">
+                              <div>
+                                 <label for="door_legnth">Height of Door</label>
+                              </div>
+                              <input type="text" class="modal-input" id="door_legnth" placeholder="Insert here">
+                           </div>
+                        </div>
+                        <div class="text-center mt-4">
+                           <button type="submit" class="btn btn-light">Ok</button>
+                           <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-      <div class="modal-body">
-      <div>
-      <div class="text-center">
-      <img src="assets/images/flooring/door.png" alt="">
-      </div>
-      <form action="#">
-      <div class="form-group row">
-      </div>
-      <div class="form-group row">
-      <div class="col-6 mt-3">
-      <div>
-      <label for="door_legnth">Length of Door</label>
-      </div>
-      <input type="text" class="modal-input" id="door_legnth" placeholder="Insert here">
-      </div>
-      <div class="col-6 mt-3">
-      <div>
-      <label for="door_legnth">Height of Door</label>
-      </div>
-      <input type="text" class="modal-input" id="door_legnth" placeholder="Insert here">
-      </div>
-      </div>
-      <div class="text-center mt-4">
-      <button type="submit" class="btn btn-light">Ok</button>
-      <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-      </div>
-      </form>
-      </div>
-      </div>
-      </div>
-      </div>
+      <!-- add_stair Modal -->
+      <div class="modal show" id="add_stair" tabindex="-1" aria-labelledby="add_stairLabel" aria-hidden="true">
+         <div class="modal-dialog " style="width:415px;">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="plan_settingsLabel">Plan Settings</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">
+                        <img src="assets/images/icons/Multiply.png" alt="close" />
+                     </span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <div>
+                     <div class="row justify-content-center">
+                        <div class="text-center border-bottom col-10">
+                           <img src="assets/images/flooring/stair_settings.png" alt="">
+                        </div>
+                     </div>
+                     <form action="#">
+                        <div class="form-group row">
+                        </div>
+                        <div class="form-group row">
+                           <div class="col-6 mt-3">
+                              <div>
+                                 <label for="stair_width">stair Width</label>
+                              </div>
+                              <input type="text" class="modal-input" id="stair_width" placeholder="Insert here">
+                           </div>
+                           <div class="col-6 mt-3">
+                              <div>
+                                 <label for="stair_tread">stair Tread</label>
+                              </div>
+                              <input type="text" class="modal-input" id="stair_tread" placeholder="Insert here">
+                           </div>
+                           <div class="col-6 mt-3">
+                              <div>
+                                 <label for="stair_riser">Stair Riser</label>
+                              </div>
+                              <input type="text" class="modal-input" id="stair_riser" placeholder="Insert here">
+                           </div>
+                           <div class="col-6 mt-3">
+                              <div>
+                                 <label for="stair_tread"># of Steps</label>
+                              </div>
+                              
+                              <select class="modal-select w-100">
+                                 <option selected>1</option>
+                                 <option value="2">2</option>
+                                 <option value="3">3</option>
+                              </select>
+                           </div>
+
+                           <div class="col-12">
+                              <div class=" mt-3">
+                                 <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Riser_to_Landing"
+                                       value="Center Material to Room">
+                                    <label class="form-check-label" for="Riser_to_Landing">Riser to Landing</label>
+                                 </div>
+                              </div>
+                              <div class=" mt-0">
+                                 <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="no_tolerance"
+                                       value="Center Material to Room">
+                                    <label class="form-check-label" for="no_tolerance">No Tolerance on Cut</label>
+                                 </div>
+                              </div>
+                           </div>
+
+                        </div>
+                        <div class="text-center mt-4">
+                           <button type="submit" class="btn btn-light">Ok</button>
+                           <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
       <!-- border_settings Modal -->
       <div class="modal show" id="border_settings" tabindex="-1" aria-labelledby="border_settingsLabel"
          aria-hidden="true">
-      <div class="modal-dialog " style="width:370px;">
-      <div class="modal-content">
-      <div class="modal-header">
-      <h5 class="modal-title" id="plan_settingsLabel">Plan Settings</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">
-      <img src="assets/images/icons/Multiply.png" alt="close" />
-      </span>
-      </button>
-      </div>
-      <div class="modal-body">
-      <div>
-      <form action="#">
-      <div class="form-group row">
-      <div class="col-12 text-center">
-      <img src="assets/images/flooring/insert_material_color.png" alt="">
-      </div>
-      </div>
-      <div class="form-group row">
-      <div class="col-12 mt-3">
-      <div>
-      <label>Material for Border</label>
-      </div>
-      <select class="modal-select w-100">
-      <option selected>None</option>
-      <option value="3">Sheet</option>
-      </select>
-      </div>
-      <div class="col-12 mt-3">
-      <div>
-      <label>Location</label>
-      </div>
-      <select class="modal-select w-100">
-      <option selected>None</option>
-      <option value="3">Sheet</option>
-      </select>
-      </div>
-      <div class="col-12 mt-3">
-      <div>
-      <label>Width</label>
-      </div>
-      <select class="modal-select w-100">
-      <option selected>None</option>
-      <option value="3">Sheet</option>
-      </select>
-      </div>
-      </div>
-      <div class="text-center mt-4">
-      <button type="submit" class="btn btn-light">Apply</button>
-      </div>
-      </form>
-      </div>
-      </div>
-      </div>
-      </div>
+         <div class="modal-dialog " style="width:370px;">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="plan_settingsLabel">Plan Settings</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">
+                        <img src="assets/images/icons/Multiply.png" alt="close" />
+                     </span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <div>
+                     <form action="#">
+                        <div class="form-group row">
+                           <div class="col-12 text-center">
+                              <img src="assets/images/flooring/insert_material_color.png" alt="">
+                           </div>
+                        </div>
+                        <div class="form-group row">
+                           <div class="col-12 mt-3">
+                              <div>
+                                 <label>Material for Border</label>
+                              </div>
+                              <select class="modal-select w-100">
+                                 <option selected>None</option>
+                                 <option value="3">Sheet</option>
+                              </select>
+                           </div>
+                           <div class="col-12 mt-3">
+                              <div>
+                                 <label>Location</label>
+                              </div>
+                              <select class="modal-select w-100">
+                                 <option selected>None</option>
+                                 <option value="3">Sheet</option>
+                              </select>
+                           </div>
+                           <div class="col-12 mt-3">
+                              <div>
+                                 <label>Width</label>
+                              </div>
+                              <select class="modal-select w-100">
+                                 <option selected>None</option>
+                                 <option value="3">Sheet</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="text-center mt-4">
+                           <button type="submit" class="btn btn-light">Apply</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
       <!-- main_settings Modal -->
       <div class="modal show" id="main_settings" tabindex="-1" aria-labelledby="main_settingsLabel" aria-hidden="true">
@@ -558,9 +765,9 @@
                <div class="modal-header">
                   <h5 class="modal-title" id="main_settingsLabel">main_settings</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">
-                  <img src="assets/images/icons/Multiply.png" alt="close" />
-                  </span>
+                     <span aria-hidden="true">
+                        <img src="assets/images/icons/Multiply.png" alt="close" />
+                     </span>
                   </button>
                </div>
                <div class="modal-body">
@@ -629,391 +836,534 @@
                               </div>
                            </div>
 
-                              <!-- Width -->
-                              <div class="col-4 mt-3">
-                                 <div>
-                                    <label>Width</label>
-                                 </div>
-                                 <input type="text" class="w-100" placeholder="Insert here">
+                           <!-- Width -->
+                           <div class="col-4 mt-3">
+                              <div>
+                                 <label>Width</label>
                               </div>
-                              <!-- Length-->
-                              <div class="col-4 mt-3">
-                                 <div>
-                                    <label>Length</label>
-                                 </div>
-                                 <input type="text" class="w-100" placeholder="Insert here">
+                              <input type="text" class="w-100" placeholder="Insert here">
+                           </div>
+                           <!-- Length-->
+                           <div class="col-4 mt-3">
+                              <div>
+                                 <label>Length</label>
                               </div>
-                              <!-- Addition Waste-->
-                              <div class="col-4 mt-3">
-                                 <div>
-                                    <label>Addition Waste</label>
-                                 </div>
-                                 <input type="text" class="w-100" placeholder="Insert here">
+                              <input type="text" class="w-100" placeholder="Insert here">
+                           </div>
+                           <!-- Addition Waste-->
+                           <div class="col-4 mt-3">
+                              <div>
+                                 <label>Addition Waste</label>
                               </div>
+                              <input type="text" class="w-100" placeholder="Insert here">
+                           </div>
 
-                              <!-- Planks Per Box -->
-                              <div class="col-4 mt-3">
-                                 <div>
-                                    <label>Planks Per Box</label>
-                                 </div>
-                                 <input type="text" class="w-100" placeholder="Insert here">
+                           <!-- Planks Per Box -->
+                           <div class="col-4 mt-3">
+                              <div>
+                                 <label>Planks Per Box</label>
                               </div>
-                              <!-- Cuts Per Plank -->
-                              <div class="col-4 mt-3">
-                                 <div>
-                                    <label>Cuts Per Plank </label>
-                                 </div>
-                                 <input type="text" class="w-100" placeholder="Insert here">
+                              <input type="text" class="w-100" placeholder="Insert here">
+                           </div>
+                           <!-- Cuts Per Plank -->
+                           <div class="col-4 mt-3">
+                              <div>
+                                 <label>Cuts Per Plank </label>
                               </div>
-                              <!-- Price Per Box-->
-                              <div class="col-4 mt-3">
-                                 <div>
-                                    <label>Price Per Box</label>
-                                 </div>
-                                 <input type="text" class="w-100" placeholder="Insert here">
+                              <input type="text" class="w-100" placeholder="Insert here">
+                           </div>
+                           <!-- Price Per Box-->
+                           <div class="col-4 mt-3">
+                              <div>
+                                 <label>Price Per Box</label>
                               </div>
+                              <input type="text" class="w-100" placeholder="Insert here">
+                           </div>
 
                         </div>
                   </div>
                   <div class=" mt-4">
                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="Center_Material" value="Center Material to Room">
+                        <input class="form-check-input" type="checkbox" id="Center_Material"
+                           value="Center Material to Room">
                         <label class="form-check-label" for="Center_Material">Center Material to Room</label>
-                       </div>
+                     </div>
                   </div>
                   </form>
                </div>
             </div>
          </div>
       </div>
-      </div>
-      </div>
-      <!-- tile_split Modal -->
-      <div class="modal fade" id="tile_split" tabindex="-1" aria-labelledby="tile_splitLabel" aria-hidden="true">
-         <div class="modal-dialog " style="width:410px;">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="tile_splitLabel">Tile Split</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">
-                  <img src="assets/images/icons/Multiply.png" alt="close" />
-                  </span>
-                  </button>
-               </div>
-               <div class="modal-body">
-                  <div classmb-3>
-                     <form action="#">
-                        <!-- vertical_split  -->
-                        <div class="form-group row">
-                           <label for="vertical_split" class="col-sm-4">Vertical split</label>
-                           <div class="col-sm-8">
-                              <input type="text" class="modal-input w-60" id="vertical_split">
-                              <button type="button" class="btn btn-light">Ok</button>
-                           </div>
-                        </div>
-                        <!-- horizontal_split  -->
-                        <div class="form-group row">
-                           <label for="horizontal_split" class="col-sm-4">Horizontal split</label>
-                           <div class="col-sm-8">
-                              <input type="text" class="modal-input w-60" id="horizontal_split">
-                              <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-                           </div>
-                        </div>
-                        <!-- horizontal_split  -->
-                        <div class="form-group row">
-                           <div class="col-12">
-                              <p class="info-para">Click inside a tile to split it into vertical and horizontal parts
-                              </p>
-                           </div>
-                        </div>
-                     </form>
+   </div>
+   </div>
+         <!-- frame_48 Modal -->
+         <div class="modal show" id="frame_48" tabindex="-1" aria-labelledby="frame_48Label" aria-hidden="true">
+            <div class="modal-dialog " style="width:600px;">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title" id="main_settingsLabel">main_settings</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                           <img src="assets/images/icons/Multiply.png" alt="close" />
+                        </span>
+                     </button>
                   </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- make_walls Modal -->
-      <div class="modal fade" id="make_walls" tabindex="-1" aria-labelledby="make_wallsLabel" aria-hidden="true">
-         <div class="modal-dialog " style="width:357px;">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="make_wallsLabel">Make Walls</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">
-                  <img src="assets/images/icons/Multiply.png" alt="close" />
-                  </span>
-                  </button>
-               </div>
-               <div class="modal-body">
-                  <div>
-                     <form action="#">
-                        <!-- door_width  -->
-                        <div class="form-group row">
-                           <label for="door_width" class="col-sm-8 text-right">wall height</label>
-                           <div class="col-sm-4">
-                              <input type="number" class="modal-input-sm" id="door_width" value="2.5">
-                           </div>
-                        </div>
-                        <!-- drop_back_size  -->
-                        <div class="form-group row">
-                           <label for="drop_back_size" class="col-sm-8 text-right">miss out wall less than</label>
-                           <div class="col-sm-4">
-                              <input type="number" class="modal-input-sm" id="drop_back_size" value="0.2">
-                           </div>
-                        </div>
-                        <!-- drop_back_size  -->
-                        <div class="form-group row justify-content-end">
-                           <div class="col-sm-12">
-                              <div class="d-flex align-items-center mb-2">
-                                 <input type="checkbox" class="modal-input mr-2" id="separate_peace_length">
-                                 <label for="separate_peace_length" class="mb-0">Separate peace for each length</label>
+                  <div class="modal-body">
+                     <div>
+                        <form action="#">
+                           <div class="form-group row">
+                              <!-- Name -->
+                              <div class="col-6 mt-3">
+                                 <div>
+                                    <label>Name</label>
+                                 </div>
+                                 <input type="text" class="w-100" placeholder="Insert here">
                               </div>
-                              <div class="d-flex align-items-center mb-2">
-                                 <input type="checkbox" class="modal-input mr-2" id="only_walls_with_base" checked
-                                    disabled>
-                                 <label for="only_walls_with_base" class="mb-0 disabled">Only walls with base</label>
+                              <!-- Series -->
+                              <div class="col-6 mt-3">
+                                 <div>
+                                    <label>Series</label>
+                                 </div>
+                                 <input type="text" class="w-100" placeholder="Insert here">
                               </div>
-                              <!-- Doors  -->
-                              <div class="card">
-                                 <h5 class="card-heading"><span>Doors</span></h5>
-                                 <div class="d-flex align-items-center m-1 ml-2">
-                                    <input type="radio" class="mr-2" id="include_doors" name="doors" value="include_doors">
-                                    <label for="include_doors" class="mb-0">include doors</label>
+                              <!-- Vendor -->
+                              <div class="col-6 mt-3">
+                                 <div>
+                                    <label>Vendor</label>
                                  </div>
-                                 <div class="d-flex align-items-center m-1 ml-2">
-                                    <input type="radio" class="mr-2" id="exclude_doors" name="doors" value="exclude_doors">
-                                    <label for="exclude_doors" class="mb-0">Exclude doors</label>
-                                 </div>
-                                 <div class="d-flex align-items-center m-1 ml-2">
-                                    <input type="radio" class="mr-2" id="only_wall_above_door" name="doors"
-                                       value="only_wall_above_door">
-                                    <label for="only_wall_above_door" class="mb-0">Only wall above door</label>
-                                 </div>
+                                 <input type="text" class="w-100" placeholder="Insert here">
                               </div>
-                              <!-- Ceramic Walls -->
-                              <div class="card">
-                                 <h5 class="card-heading"><span>Ceramic Walls</span></h5>
-                                 <div class="d-flex align-items-center m-1 ml-2 mb-0">
-                                    <input type="checkbox" class="modal-input mr-2" id="bullnose_top">
-                                    <label for="bullnose_top" class="mb-0">Bullnose top</label>
+                              <!-- Color -->
+                              <div class="col-6 mt-3">
+                                 <div>
+                                    <label>Color</label>
                                  </div>
-                                 <div class="d-flex align-items-center m-1 ml-2">
-                                    <input type="checkbox" class="modal-input mr-2" id="bullnose_bottom">
-                                    <label for="bullnose_bottom" class="mb-0">Bullnose Bottom</label>
+                                 <input type="text" class="w-100" placeholder="Insert here">
+                              </div>
+                              <!-- Manufacture -->
+                              <div class="col-6 mt-3">
+                                 <div>
+                                    <label>Manufacture</label>
                                  </div>
-                                 <!-- drop_back_size  -->
-                                 <div class="form-group row py-1">
-                                    <div class="d-flex align-items-center col-sm-8">
-                                       <input type="checkbox" class="modal-input mx-2" id="trim_on_internal_corners">
-                                       <label for="trim_on_internal_corners" class="mb-0">Trim on internal
-                                       corners</label>
-                                    </div>
-                                    <div class="col-sm-4">
-                                       <input type="number" class="modal-input-sm" id="trim_on_internal_corners_size"
-                                          value="4">
-                                    </div>
+                                 <input type="text" class="w-100" placeholder="Insert here">
+                              </div>
+                              <!-- Installation Method -->
+                              <div class="col-6 mt-3">
+                                 <div>
+                                    <label>Installation Method</label>
                                  </div>
-                                 <!-- drop_back_size  -->
-                                 <div class="form-group row py-1">
-                                    <div class="d-flex align-items-center col-sm-8">
-                                       <input type="checkbox" class="modal-input mx-2" id="trim_on_external_corners">
-                                       <label for="trim_on_external_corners" class="mb-0">Trim on external
-                                       corners</label>
+                                 <input type="text" class="w-100" placeholder="Insert here">
+                              </div>
+                              <div class="col-12 my-3">
+                                 <textarea name="" id="" cols="50" rows="10"></textarea>
+                              </div>
+                              <div class="col-12">
+                                 <div class="row text-center">
+                                    <div class="col-3 p-0">
+                                       <button type="submit" class="btn btn-light m-0">Edit Color</button>
                                     </div>
-                                    <div class="col-sm-4">
-                                       <input type="number" class="modal-input-sm" id="trim_on_external_corners_size"
-                                          value="4">
+                                    <div class="col-3 p-0">
+                                       <button type="submit" class="btn btn-light m-0">Edit Hatch</button>
+                                    </div>
+                                    <div class="col-3 p-0">
+                                       <button type="submit" class="btn btn-light m-0">Create Copy</button>
+                                    </div>
+                                    <div class="col-3 p-0">
+                                       <button type="submit" class="btn btn-light m-0">Delete</button>
                                     </div>
                                  </div>
                               </div>
-                           </div>
-                        </div>
-                        <div class="text-center">
-                           <button type="submit" class="btn btn-light">Ok</button>
-                           <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- plan_settings Modal -->
-      <div class="modal show" id="plan_settings" tabindex="-1" aria-labelledby="plan_settingsLabel" aria-hidden="true">
-         <div class="modal-dialog " style="width:420px;">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="plan_settingsLabel">Plan Settings</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">
-                  <img src="assets/images/icons/Multiply.png" alt="close" />
-                  </span>
-                  </button>
-               </div>
-               <div class="modal-body">
-                  <div>
-                     <form action="#">
-                        <!-- door_width  -->
-                        <div class="form-group row">
-                           <label for="door_width" class="col-sm-12 text-right">wall height</label>
-                           <div class="col-sm-8">
-                              <textarea name="" id="" cols="30" rows="4"></textarea>
-                              <input type="number" class="modal-input-sm" id="door_width" value="2.5">
-                           </div>
-                        </div>
-                        <div class="text-center">
-                           <button type="submit" class="btn btn-light">Ok</button>
-                           <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- frame_38 Modal -->
-      <div class="modal show" id="frame_38" tabindex="-1" aria-labelledby="frame_38Label" aria-hidden="true">
-         <div class="modal-dialog " style="width:420px;">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="plan_settingsLabel">Plan Settings</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">
-                  <img src="assets/images/icons/Multiply.png" alt="close" />
-                  </span>
-                  </button>
-               </div>
-               <div class="modal-body">
-                  <div>
-                     <form action="#">
-                        <div class="form-group row">
-                           <div class="col-12">
-                              <textarea name="" id="" cols="40" rows="4" placeholder="Insert Here"></textarea>
-                           </div>
-                        </div>
-                        <div class="form-group row">
-                           <div class="col-12 mt-3">
-                              <div>
-                                 <label for="fonts">Fonts</label>
-                              </div>
-                              <select class="modal-input modal-select">
-                                 <option selected>Times New Roman</option>
+   
+                              <!-- Width -->
+                              <div class="col-4 mt-3">
+                                 <div>
+                                    <label>Width</label>
+                                 </div>
+                                 
+                              <select class="modal-select w-100">
+                                 <option selected>Sq. Feet</option>
                                  <option value="3">Sheet</option>
                               </select>
-                           </div>
-                           <div class="col-8 mt-3">
-                              <div>
-                                 <label for="fonts">Fonts</label>
                               </div>
-                              <select class="modal-input modal-select">
-                                 <option selected>Times New Roman</option>
-                                 <option value="3">Sheet</option>
-                              </select>
-                           </div>
-                           <div class="col-4 mt-3">
-                              <div>
-                                 <label for="fonts">Fonts</label>
+                              <!-- Length-->
+                              <div class="col-4 mt-3">
+
+                                 <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="integral_base"
+                                       value="integral_base">
+                                    <label class="form-check-label" for="integral_base">Integral Base</label>
+                                 </div>
+                                 <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Corner_Count"
+                                       value="Corner Count">
+                                    <label class="form-check-label" for="Corner_Count">Corner Count</label>
+                                 </div>
+
                               </div>
-                              <select class="modal-input-sm modal-select">
-                                 <option selected>10</option>
-                                 <option value="3">12</option>
-                              </select>
-                           </div>
-                           <div class="col-4 mt-3">
-                              <div>
-                                 <label for="fonts">Color</label>
+                              <!-- Addition Waste-->
+                              <div class="col-4 mt-5">
+                                 <input type="number" class="w-100" placeholder="1">
                               </div>
-                              <input type="color" class="modal-input form-control">
+   
+                              <!-- Price per Square Foot of Material -->
+                              <div class="col-4 mt-3">
+                                 <div>
+                                    <label>Price per Square Foot of Material</label>
+                                 </div>
+                                 <input type="text" class="w-100" placeholder="$">
+                              </div>
+                              <!-- Labor Price Per Square Foot -->
+                              <div class="col-4 mt-3">
+                                 <div>
+                                    <label>Labor Price Per Square Foot </label>
+                                 </div>
+                                 <input type="text" class="w-100" placeholder="$">
+                              </div>
+                              <!-- Price Per Box-->
+                              <div class="col-4 mt-4">
+                                 <div>
+                                    <label>Waste Add-on</label>
+                                 </div>
+                                 <input type="text" class="w-100" placeholder="Insert here">
+                              </div>
+   
                            </div>
-                        </div>
-                        <div class="text-center mt-4">
-                           <button type="submit" class="btn btn-light">Ok</button>
-                           <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-                        </div>
+                     </div>   
                      </form>
                   </div>
                </div>
             </div>
          </div>
-      </div>
-      <!-- import_another modal -->
-      <div class="modal fade" id="import_another" tabindex="-1" aria-labelledby="import_anotherLabel" aria-hidden="true"
-         data-backdrop="static" aria-hidden="true">
-         <div class="modal-dialog " style="width:356px; ">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+   <!-- tile_split Modal -->
+   <div class="modal fade" id="tile_split" tabindex="-1" aria-labelledby="tile_splitLabel" aria-hidden="true">
+      <div class="modal-dialog " style="width:410px;">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="tile_splitLabel">Tile Split</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">
-                  <img src="assets/images/icons/Multiply.png" alt="close" />
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
                   </span>
-                  </button>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div classmb-3>
+                  <form action="#">
+                     <!-- vertical_split  -->
+                     <div class="form-group row">
+                        <label for="vertical_split" class="col-sm-4">Vertical split</label>
+                        <div class="col-sm-8">
+                           <input type="text" class="modal-input w-60" id="vertical_split">
+                           <button type="button" class="btn btn-light">Ok</button>
+                        </div>
+                     </div>
+                     <!-- horizontal_split  -->
+                     <div class="form-group row">
+                        <label for="horizontal_split" class="col-sm-4">Horizontal split</label>
+                        <div class="col-sm-8">
+                           <input type="text" class="modal-input w-60" id="horizontal_split">
+                           <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                        </div>
+                     </div>
+                     <!-- horizontal_split  -->
+                     <div class="form-group row">
+                        <div class="col-12">
+                           <p class="info-para">Click inside a tile to split it into vertical and horizontal parts
+                           </p>
+                        </div>
+                     </div>
+                  </form>
                </div>
-               <div class="modal-body" style="min-height: 400px; justify-content: space-between;
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- make_walls Modal -->
+   <div class="modal fade" id="make_walls" tabindex="-1" aria-labelledby="make_wallsLabel" aria-hidden="true">
+      <div class="modal-dialog " style="width:357px;">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="make_wallsLabel">Make Walls</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div>
+                  <form action="#">
+                     <!-- door_width  -->
+                     <div class="form-group row">
+                        <label for="door_width" class="col-sm-8 text-right">wall height</label>
+                        <div class="col-sm-4">
+                           <input type="number" class="modal-input-sm" id="door_width" value="2.5">
+                        </div>
+                     </div>
+                     <!-- drop_back_size  -->
+                     <div class="form-group row">
+                        <label for="drop_back_size" class="col-sm-8 text-right">miss out wall less than</label>
+                        <div class="col-sm-4">
+                           <input type="number" class="modal-input-sm" id="drop_back_size" value="0.2">
+                        </div>
+                     </div>
+                     <!-- drop_back_size  -->
+                     <div class="form-group row justify-content-end">
+                        <div class="col-sm-12">
+                           <div class="d-flex align-items-center mb-2">
+                              <input type="checkbox" class="modal-input mr-2" id="separate_peace_length">
+                              <label for="separate_peace_length" class="mb-0">Separate peace for each length</label>
+                           </div>
+                           <div class="d-flex align-items-center mb-2">
+                              <input type="checkbox" class="modal-input mr-2" id="only_walls_with_base" checked
+                                 disabled>
+                              <label for="only_walls_with_base" class="mb-0 disabled">Only walls with base</label>
+                           </div>
+                           <!-- Doors  -->
+                           <div class="card">
+                              <h5 class="card-heading"><span>Doors</span></h5>
+                              <div class="d-flex align-items-center m-1 ml-2">
+                                 <input type="radio" class="mr-2" id="include_doors" name="doors" value="include_doors">
+                                 <label for="include_doors" class="mb-0">include doors</label>
+                              </div>
+                              <div class="d-flex align-items-center m-1 ml-2">
+                                 <input type="radio" class="mr-2" id="exclude_doors" name="doors" value="exclude_doors">
+                                 <label for="exclude_doors" class="mb-0">Exclude doors</label>
+                              </div>
+                              <div class="d-flex align-items-center m-1 ml-2">
+                                 <input type="radio" class="mr-2" id="only_wall_above_door" name="doors"
+                                    value="only_wall_above_door">
+                                 <label for="only_wall_above_door" class="mb-0">Only wall above door</label>
+                              </div>
+                           </div>
+                           <!-- Ceramic Walls -->
+                           <div class="card">
+                              <h5 class="card-heading"><span>Ceramic Walls</span></h5>
+                              <div class="d-flex align-items-center m-1 ml-2 mb-0">
+                                 <input type="checkbox" class="modal-input mr-2" id="bullnose_top">
+                                 <label for="bullnose_top" class="mb-0">Bullnose top</label>
+                              </div>
+                              <div class="d-flex align-items-center m-1 ml-2">
+                                 <input type="checkbox" class="modal-input mr-2" id="bullnose_bottom">
+                                 <label for="bullnose_bottom" class="mb-0">Bullnose Bottom</label>
+                              </div>
+                              <!-- drop_back_size  -->
+                              <div class="form-group row py-1">
+                                 <div class="d-flex align-items-center col-sm-8">
+                                    <input type="checkbox" class="modal-input mx-2" id="trim_on_internal_corners">
+                                    <label for="trim_on_internal_corners" class="mb-0">Trim on internal
+                                       corners</label>
+                                 </div>
+                                 <div class="col-sm-4">
+                                    <input type="number" class="modal-input-sm" id="trim_on_internal_corners_size"
+                                       value="4">
+                                 </div>
+                              </div>
+                              <!-- drop_back_size  -->
+                              <div class="form-group row py-1">
+                                 <div class="d-flex align-items-center col-sm-8">
+                                    <input type="checkbox" class="modal-input mx-2" id="trim_on_external_corners">
+                                    <label for="trim_on_external_corners" class="mb-0">Trim on external
+                                       corners</label>
+                                 </div>
+                                 <div class="col-sm-4">
+                                    <input type="number" class="modal-input-sm" id="trim_on_external_corners_size"
+                                       value="4">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="text-center">
+                        <button type="submit" class="btn btn-light">Ok</button>
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- plan_settings Modal -->
+   <div class="modal show" id="plan_settings" tabindex="-1" aria-labelledby="plan_settingsLabel" aria-hidden="true">
+      <div class="modal-dialog " style="width:420px;">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="plan_settingsLabel">Plan Settings</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div>
+                  <form action="#">
+                     <!-- door_width  -->
+                     <div class="form-group row">
+                        <label for="door_width" class="col-sm-12 text-right">wall height</label>
+                        <div class="col-sm-8">
+                           <textarea name="" id="" cols="30" rows="4"></textarea>
+                           <input type="number" class="modal-input-sm" id="door_width" value="2.5">
+                        </div>
+                     </div>
+                     <div class="text-center">
+                        <button type="submit" class="btn btn-light">Ok</button>
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- add_text Modal -->
+   <div class="modal show" id="add_text" tabindex="-1" aria-labelledby="add_textLabel" aria-hidden="true">
+      <div class="modal-dialog " style="width:420px;">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="plan_settingsLabel">Plan Settings</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div>
+                  <form action="#">
+                     <div class="form-group row">
+                        <div class="col-12">
+                           <textarea name="" id="" cols="40" rows="4" placeholder="Insert Here"></textarea>
+                        </div>
+                     </div>
+                     <div class="form-group row">
+                        <div class="col-12 mt-3">
+                           <div>
+                              <label for="fonts">Fonts</label>
+                           </div>
+                           <select class="modal-input modal-select">
+                              <option selected>Times New Roman</option>
+                              <option value="3">Sheet</option>
+                           </select>
+                        </div>
+                        <div class="col-8 mt-3">
+                           <div>
+                              <label for="fonts">Fonts</label>
+                           </div>
+                           <select class="modal-input modal-select">
+                              <option selected>Times New Roman</option>
+                              <option value="3">Sheet</option>
+                           </select>
+                        </div>
+                        <div class="col-4 mt-3">
+                           <div>
+                              <label for="fonts">Fonts</label>
+                           </div>
+                           <select class="modal-input-sm modal-select">
+                              <option selected>10</option>
+                              <option value="3">12</option>
+                           </select>
+                        </div>
+                        <div class="col-4 mt-3">
+                           <div>
+                              <label for="fonts">Color</label>
+                           </div>
+                           <input type="color" class="modal-input form-control">
+                        </div>
+                     </div>
+                     <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-light">Ok</button>
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- import_another modal -->
+   <div class="modal fade" id="import_another" tabindex="-1" aria-labelledby="import_anotherLabel" aria-hidden="true"
+      data-backdrop="static" aria-hidden="true">
+      <div class="modal-dialog " style="width:356px; ">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body" style="min-height: 400px; justify-content: space-between;
                display: flex;
                flex-direction: column;">
-                  
-                  
-                  <div class="d-flex flex-column">
-                     <p class="text-center">Do you want to import another drawing your current?</p>
-                     <form action="#">
 
-                        <div class="form-group row">
-                           <div class="col-6 mt-3">
-                              <div>
-                                 <label for="fonts">Fonts</label>
-                              </div>
-                              <select class="modal-input modal-select">
-                                 <option selected>Times New Roman</option>
-                                 <option value="3">Sheet</option>
-                              </select>
-                           </div>
-                           <div class="col-6 mt-3">
-                              <div>
-                                 <label for="fonts">Fonts</label>
-                              </div>
-                              <select class="modal-input-sm modal-select">
-                                 <option selected>Times New Roman</option>
-                                 <option value="3">Sheet</option>
-                              </select>
-                           </div>
 
+               <div class="d-flex flex-column">
+                  <p class="text-center">Do you want to import another drawing your current?</p>
+                  <form action="#">
+
+                     <div class="form-group row">
+                        <div class="col-6 mt-3">
+                           <div>
+                              <label for="fonts">Fonts</label>
+                           </div>
+                           <select class="modal-input modal-select">
+                              <option selected>Times New Roman</option>
+                              <option value="3">Sheet</option>
+                           </select>
                         </div>
-                        
-                     </form>
-                  </div>
-                  
-                  <div class="text-center mt-4">
-                     <button type="submit" class="btn btn-light">Apply</button>
-                  </div>
+                        <div class="col-6 mt-3">
+                           <div>
+                              <label for="fonts">Fonts</label>
+                           </div>
+                           <select class="modal-input-sm modal-select">
+                              <option selected>Times New Roman</option>
+                              <option value="3">Sheet</option>
+                           </select>
+                        </div>
 
-                  
+                     </div>
+
+                  </form>
                </div>
+
+               <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-light">Apply</button>
+               </div>
+
+
             </div>
          </div>
       </div>
-      <!-- quantity modal -->
-      <div class="modal fade" id="quantity" tabindex="-1" aria-labelledby="quantityLabel" aria-hidden="true"
-         data-backdrop="static" aria-hidden="true">
-         <div class="modal-dialog " style="width:546px; ">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+   </div>
+   <!-- quantity modal -->
+   <div class="modal fade" id="quantity" tabindex="-1" aria-labelledby="quantityLabel" aria-hidden="true"
+      data-backdrop="static" aria-hidden="true">
+      <div class="modal-dialog " style="width:546px; ">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">
-                  <img src="assets/images/icons/Multiply.png" alt="close" />
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
                   </span>
-                  </button>
-               </div>
-               <div class="modal-body" style="justify-content: space-between;
+               </button>
+            </div>
+            <div class="modal-body" style="justify-content: space-between;
                display: flex;
                flex-direction: column;">
-                  
-                  
-                  <div class="d-flex flex-column">
-                     <p class="text-center">Please Specify how many rooms you want and enter the quantity in the box named “Quantity” then enter either the number of row or columns you want. Please note that this program will distribute th quantity requested by dividing it into the number of rows or columns requested.</p>
-                     <form action="#">
 
-                        <div class="form-group row">
-                           
+
+               <div class="d-flex flex-column">
+                  <p class="text-center">Please Specify how many rooms you want and enter the quantity in the box named
+                     “Quantity” then enter either the number of row or columns you want. Please note that this program
+                     will distribute th quantity requested by dividing it into the number of rows or columns requested.
+                  </p>
+                  <form action="#">
+
+                     <div class="form-group row">
+
                         <!-- Quantity -->
                         <div class="col-4 mt-3">
                            <div>
@@ -1035,158 +1385,473 @@
                            </div>
                            <input type="text" class="w-100" placeholder="Insert here">
                         </div>
-                        </div>
-                     </form>
-                  </div>
-                  
-                  <div class="text-center mt-4">
-                     <button type="submit" class="btn btn-light">Make Copy</button>
-                  </div>
-
-                  
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- frame_43 modal -->
-      <div class="modal fade" id="frame_43" tabindex="-1" aria-labelledby="frame_43Label" aria-hidden="true"
-         data-backdrop="static" aria-hidden="true">
-         <div class="modal-dialog " style="width:546px; ">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">
-                  <img src="assets/images/icons/Multiply.png" alt="close" />
-                  </span>
-                  </button>
-               </div>
-               <div class="modal-body" style="justify-content: space-between;
-               display: flex;
-               flex-direction: column;">
-                  
-                  
-                  <div class="d-flex flex-column text-center">
-                     <form action="#" >
-                        <div>
-                           <label for="frame_43_file"><img src="assets/images/flooring/frame_43.png" alt=""></label>
-                           <input type="file" id="frame_43_file" >
-                        </div>
-                     </form>
-                  </div>
-                  
-                  <div class="text-center mt-4">
-                     <button type="submit" class="btn btn-light">Apply</button>
-                  </div>
-
-                  
-               </div>
-            </div>
-         </div>
-      </div>
-      
-      <!-- frame_43 modal -->
-      <div class="modal fade" id="frame_43" tabindex="-1" aria-labelledby="frame_43Label" aria-hidden="true"
-         data-backdrop="static" aria-hidden="true">
-         <div class="modal-dialog " style="width:546px; ">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">
-                  <img src="assets/images/icons/Multiply.png" alt="close" />
-                  </span>
-                  </button>
-               </div>
-               <div class="modal-body" style="justify-content: space-between;
-               display: flex;
-               flex-direction: column;">
-                  
-                  
-                  <div class="d-flex flex-column text-center">
-                     <form action="#" >
-                        <div>
-                           <label for="frame_43_file"><img src="assets/images/flooring/frame_43.png" alt=""></label>
-                           <input type="file" id="frame_43_file" >
-                        </div>
-                     </form>
-                  </div>
-                  
-                  <div class="text-center mt-4">
-                     <button type="submit" class="btn btn-light">Apply</button>
-                  </div>
-
-                  
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <!-- chat modal -->
-      <div class="modal fade chat" id="chat" tabindex="-1" aria-labelledby="chatLabel" aria-hidden="true"
-         data-backdrop="static" aria-hidden="true">
-         <div class="modal-dialog " style="width:420px;">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">
-                  <img src="assets/images/icons/Multiply.png" alt="close" />
-                  </span>
-                  </button>
-               </div>
-               <div class="modal-body" style="height: 400px; ">
-                  <form action="">
-                     <div class="input-group">
-                        <input type="search" class="form-control search" id="search" placeholder="Search">
-                        <label for="search" class="search-lable m-0"><img class="search-icon"
-                           src="assets/images/chat-modal/search.png" alt="Not-Show"></label>
                      </div>
                   </form>
-                  <div style=" height: 340px;">
-                     <div class="notification">
-                        <div class="d-flex justify-content-between  py-2">
-                           <div class="media  align-items-center">
+               </div>
+
+               <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-light">Make Copy</button>
+               </div>
+
+
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- count_item modal -->
+   <div class="modal fade" id="count_item" tabindex="-1" aria-labelledby="count_itemLabel" aria-hidden="true"
+      data-backdrop="static" aria-hidden="true">
+      <div class="modal-dialog " style="width:420px; ">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body">
+
+               <div class="row">
+                  <div class="col-12">
+                     <div class="item-group">
+                        <div class="item">
+                           <!-- item_1 -->
+                           <input id="item_1" type="checkbox" class="item-checkbox" hidden>
+                           <label for="item_1"><img src="assets/images/icons/item_icon.png" alt=""> Item 1</label>
+
+                           <!-- item_2 -->
+                           <input id="item_2" type="checkbox" class="item-checkbox" hidden>
+                           <label for="item_2"><img src="assets/images/icons/item_icon.png" alt=""> Item 2</label>
+
+                           <!-- item_3 -->
+                           <input id="item_3" type="checkbox" class="item-checkbox" hidden>
+                           <label for="item_3"><img src="assets/images/icons/item_icon.png" alt=""> Item 3</label>
+
+                           <!-- item_4 -->
+                           <input id="item_4" type="checkbox" class="item-checkbox" hidden>
+                           <label for="item_4"><img src="assets/images/icons/item_icon.png" alt=""> Item 4</label>
+
+                           <!-- item_5 -->
+                           <input id="item_5" type="checkbox" class="item-checkbox" hidden>
+                           <label for="item_5"><img src="assets/images/icons/item_icon.png" alt=""> Item 5</label>
+
+                           <!-- item_6 -->
+                           <input id="item_6" type="checkbox" class="item-checkbox" hidden>
+                           <label for="item_6"><img src="assets/images/icons/item_icon.png" alt=""> Item 6</label>
+
+                           <!-- item_7 -->
+                           <input id="item_7" type="checkbox" class="item-checkbox" hidden>
+                           <label for="item_7"><img src="assets/images/icons/item_icon.png" alt=""> Item 7</label>
+
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+
+               <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-light">Delete</button>
+                  <button type="submit" class="btn btn-light">Save</button>
+               </div>
+
+
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- new_project modal -->
+   <div class="modal fade" id="new_project" tabindex="-1" aria-labelledby="new_projectLabel" aria-hidden="true"
+      data-backdrop="static" aria-hidden="true">
+      
+      <div class="modal-dialog " style="width:600px;">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="main_settingsLabel">New</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div>
+                  <form action="#">
+                     <div class="form-group row">
+                        <!-- Project Name -->
+                        <div class="col-6 mt-3">
+                           <div>
+                              <label>Project Name</label>
+                           </div>
+                           <input type="text" class="w-100" placeholder="Insert here">
+                        </div>
+                        <!-- Project Address -->
+                        <div class="col-6 mt-3">
+                           <div>
+                              <label>Project Address</label>
+                           </div>
+                           <input type="text" class="w-100" placeholder="Insert here">
+                        </div>
+                        <!-- Dated -->
+                        <div class="col-6 mt-3">
+                           <div>
+                              <label>Dated</label>
+                           </div>
+                           <input type="text" class="w-100" placeholder="01/30/23 12:00 AM">
+                        </div>
+                        <!-- Architect Company -->
+                        <div class="col-6 mt-3">
+                           <div>
+                              <label>Architect Company</label>
+                           </div>
+                           <input type="text" class="w-100" placeholder="Insert here">
+                        </div>
+                        <!-- Manufacture -->
+                        <div class="col-6 mt-3">
+                           <div>
+                              <label>Pages from Plans</label>
+                           </div>
+                           <input type="text" class="w-100" placeholder="Insert here">
+                        </div>
+                        <!-- Installation Method -->
+                        <div class="col-6 mt-3">
+                           <div>
+                              <label for="Scale">Scale</label>
+                           </div>
+                           
+                           <select class="modal-select w-100">
+                              <option selected="">Sq. Feet</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                           </select>
+                        </div>
+
+                        <div class="col-md-8">
+                           <div class="row">
+
+                              <!-- My Name -->
+                        <div class="col-6 mt-3">
+                           <div>
+                              <label>My Name</label>
+                           </div>
+                           <input type="text" class="w-100" placeholder="Insert here">
+                        </div>
+                        <!-- My Phone-->
+                        <div class="col-6 mt-3">
+                           <div>
+                              <label>My Phone</label>
+                           </div>
+                           <input type="text" class="w-100" placeholder="Insert here">
+                        </div>
+                              <!-- My Company -->
+                        <div class="col-6 mt-3">
+                           <div>
+                              <label>My Company</label>
+                           </div>
+                           <input type="text" class="w-100" placeholder="Insert here">
+                        </div>
+                        <!-- My Email-->
+                        <div class="col-6 mt-3">
+                           <div>
+                              <label>My Email</label>
+                           </div>
+                           <input type="text" class="w-100" placeholder="Insert here">
+                        </div>
+                        <!-- My Address-->
+                        <div class="col-6 mt-3">
+                           <div>
+                              <label>My Address</label>
+                           </div>
+                           <input type="text" class="w-100" placeholder="Insert here">
+                        </div>
+
+                           </div>
+                        </div>
+                        <!-- Addition Waste-->
+                        <div class="col-4 mt-3">
+                           <div>
+                              <label>Addition Waste</label>
+                           </div>
+                           <textarea name="" id="" cols="14" rows="5"  placeholder="Insert here"></textarea>
+                        </div>
+
+                     </div>
+               </div>
+              
+               <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-light">Next</button>
+               </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- frame_43 modal -->
+   <div class="modal fade" id="frame_43" tabindex="-1" aria-labelledby="frame_43Label" aria-hidden="true"
+      data-backdrop="static" aria-hidden="true">
+      <div class="modal-dialog " style="width:546px; ">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body" style="justify-content: space-between;
+               display: flex;
+               flex-direction: column;">
+
+
+               <div class="d-flex flex-column text-center">
+                  <form action="#">
+                     <div>
+                        <label for="frame_43_file"><img src="assets/images/flooring/frame_43.png" alt=""></label>
+                        <input type="file" id="frame_43_file">
+                     </div>
+                  </form>
+               </div>
+
+               <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-light">Apply</button>
+               </div>
+
+
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- chat modal -->
+   <div class="modal fade chat" id="chat" tabindex="-1" aria-labelledby="chatLabel" aria-hidden="true"
+      data-backdrop="static" aria-hidden="true">
+      <div class="modal-dialog " style="width:420px;">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body" style="height: 400px; ">
+               <form action="" class="pb-2">
+                  <div class="input-group">
+                     <input type="search" class="form-control search" id="search" placeholder="Search">
+                     <label for="search" class="search-lable m-0"><img class="search-icon"
+                           src="assets/images/chat-modal/search.png" alt="Not-Show"></label>
+                  </div>
+               </form>
+               <div class="scrollbar py-2" style=" height: 340px; overflow: auto; ">
+                  <div class="notification pr-2" style="max-height: 300px;">
+                     <div class="d-flex justify-content-between  py-2">
+                        <div class="media  align-items-center">
+                           <div class="position-relative">
                               <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
                                  alt="Not_Show">
-                              <div class="media-body>
-                                 <h5 class="mb-0">Media heading</h5>
-                                 <p class="mb-0">Will you do the same .</p>
+                              <span class="badge">+5</span>
+                           </div>
+                           <div class="media-body>
+                                 <h5 class=" mb-0">Media heading</h5>
+                           </div>
+                        </div>
+                        <p>sun</p>
+                     </div>
+                     <div class="d-flex justify-content-between  py-2">
+                        <div class="media  align-items-center">
+                           <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
+                              alt="Not_Show">
+                           <div class="media-body>
+                                 <h5 class=" mb-0">Media heading</h5>
+                           </div>
+                        </div>
+                        <p>sun</p>
+                     </div>
+                     <div class="d-flex justify-content-between  py-2">
+                        <div class="media  align-items-center">
+                           <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
+                              alt="Not_Show">
+                           <div class="media-body>
+                                 <h5 class=" mb-0">Media heading</h5>
+                           </div>
+                        </div>
+                        <p>sun</p>
+                     </div>
+
+                     <div class="d-flex justify-content-between  py-2">
+                        <div class="media  align-items-center">
+                           <div class="position-relative">
+                              <div class="position-relative">
+                                 <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
+                                    alt="Not_Show">
+                                 <span class="badge">+5</span>
                               </div>
                            </div>
-                           <p>sun</p>
+                           <div class="media-body>
+                                 <h5 class=" mb-0">Media heading</h5>
+                           </div>
                         </div>
-                        <div class="d-flex justify-content-between  py-2">
-                           <div class="media  align-items-center">
+                        <p>sun</p>
+                     </div>
+
+                     <div class="d-flex justify-content-between  py-2">
+                        <div class="media  align-items-center">
+                           <div class="position-relative">
                               <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
                                  alt="Not_Show">
-                              <div class="media-body>
-                                 <h5 class="mb-0">Media heading</h5>
-                                 <p class="mb-0">Will you do the same .</p>
-                              </div>
+                              <span class="badge">+5</span>
                            </div>
-                           <p>sun</p>
+                           <div class="media-body>
+                                 <h5 class=" mb-0">Media heading</h5>
+                           </div>
                         </div>
-                        <div class="d-flex justify-content-between  py-2">
-                           <div class="media  align-items-center">
+                        <p>sun</p>
+                     </div>
+
+
+                     <div class="d-flex justify-content-between  py-2">
+                        <div class="media  align-items-center">
+                           <div class="position-relative">
                               <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
                                  alt="Not_Show">
-                              <div class="media-body>
-                                 <h5 class="mb-0">Media heading</h5>
-                                 <p class="mb-0">Will you do the same .</p>
-                              </div>
+                              <span class="badge">+5</span>
                            </div>
-                           <p>sun</p>
+                           <div class="media-body>
+                                 <h5 class=" mb-0">Media heading</h5>
+                           </div>
                         </div>
+                        <p>sun</p>
                      </div>
                   </div>
                </div>
             </div>
          </div>
       </div>
+   </div>
+
+   <!-- invite modal -->
+   <div class="modal fade chat" id="invite" tabindex="-1" aria-labelledby="inviteLabel" aria-hidden="true"
+      data-backdrop="static" aria-hidden="true">
+      <div class="modal-dialog " style="width:655px;">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body" style="height: 400px; ">
+               <form action="" class="pb-2">
+                  <div class="input-group">
+                     <select class="selectpicker" data-show-subtext="true" data-live-search="true">
+                        <option data-subtext="Rep California">Tom Foolery</option>
+                        <option data-subtext="Sen California">Bill Gordon</option>
+                        <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+                        <option data-subtext="Rep Alabama">Mario Flores</option>
+                        <option data-subtext="Rep Alaska">Don Young</option>
+                        <option data-subtext="Rep California" disabled="disabled">Marvin Martinez</option>
+                     </select>
+                     <input type="search" class="form-control search" id="search" placeholder="Search">
+                     <label for="search" class="search-lable m-0"><img class="search-icon"
+                           src="assets/images/chat-modal/search.png" alt="Not-Show"></label>
+                  </div>
+               </form>
+               <div class="scrollbar py-2" style=" height: 340px; overflow: auto; ">
+                  <div class="notification pr-2" style="max-height: 300px;">
+                     <div class="d-flex justify-content-between  py-2">
+                        <div class="media  align-items-center">
+                           <div class="position-relative">
+                              <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
+                                 alt="Not_Show">
+                              <span class="badge">+5</span>
+                           </div>
+                           <div class="media-body>
+                                 <h5 class=" mb-0">Media heading</h5>
+                           </div>
+                        </div>
+                        <p>sun</p>
+                     </div>
+                     <div class="d-flex justify-content-between  py-2">
+                        <div class="media  align-items-center">
+                           <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
+                              alt="Not_Show">
+                           <div class="media-body>
+                                 <h5 class=" mb-0">Media heading</h5>
+                           </div>
+                        </div>
+                        <p>sun</p>
+                     </div>
+                     <div class="d-flex justify-content-between  py-2">
+                        <div class="media  align-items-center">
+                           <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
+                              alt="Not_Show">
+                           <div class="media-body>
+                                 <h5 class=" mb-0">Media heading</h5>
+                           </div>
+                        </div>
+                        <p>sun</p>
+                     </div>
+
+                     <div class="d-flex justify-content-between  py-2">
+                        <div class="media  align-items-center">
+                           <div class="position-relative">
+                              <div class="position-relative">
+                                 <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
+                                    alt="Not_Show">
+                                 <span class="badge">+5</span>
+                              </div>
+                           </div>
+                           <div class="media-body>
+                                 <h5 class=" mb-0">Media heading</h5>
+                           </div>
+                        </div>
+                        <p>sun</p>
+                     </div>
+
+                     <div class="d-flex justify-content-between  py-2">
+                        <div class="media  align-items-center">
+                           <div class="position-relative">
+                              <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
+                                 alt="Not_Show">
+                              <span class="badge">+5</span>
+                           </div>
+                           <div class="media-body>
+                                 <h5 class=" mb-0">Media heading</h5>
+                           </div>
+                        </div>
+                        <p>sun</p>
+                     </div>
 
 
+                     <div class="d-flex justify-content-between  py-2">
+                        <div class="media  align-items-center">
+                           <div class="position-relative">
+                              <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
+                                 alt="Not_Show">
+                              <span class="badge">+5</span>
+                           </div>
+                           <div class="media-body>
+                                 <h5 class=" mb-0">Media heading</h5>
+                           </div>
+                        </div>
+                        <p>sun</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-      <!-- JavaScript -->
-      <script src="assets/js/jquery-3.5.1.js"></script>
-      <script src="assets/js/popper.min.js"></script>
-      <script src="assets/js/bootstrap.min.js"></script>
-   </body>
+   </div>
+
+
+   </div>
+   <!-- JavaScript -->
+   <script src="assets/js/jquery-3.5.1.js"></script>
+   <script src="assets/js/popper.min.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/bootstrap-select.min.js"></script>
+</body>
+
 </html>
