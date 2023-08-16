@@ -328,3 +328,8 @@ font-size: 15px;
     background-color: #000000;
     border: 1px solid #FFFFFF;
 }
+.modal-body .input-transparent{
+    background: none;
+    border: none;
+    color: white;
+}

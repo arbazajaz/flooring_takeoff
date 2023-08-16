@@ -416,7 +416,7 @@
                      </span>
 
                      <!-- Mail -->
-                     <span class="widget_span"><img src="assets/images/icons/mail.png" alt="">
+                     <span type="button" data-toggle="modal" data-target="#mail" class="widget_span"><img src="assets/images/icons/mail.png" alt="">
                         <p class="widget_name">Mail</p>
                      </span>
                   </div>
@@ -454,7 +454,7 @@
                               <p class="widget_name">Add Base</p>
                            </span>
                            <!-- Material Setting -->
-                           <span class="widget_span col-md-4"><img src="assets/images/icons/material_setting.png" alt="">
+                           <span type="button" data-toggle="modal" data-target="#frame_53" class="widget_span col-md-4"><img src="assets/images/icons/material_setting.png" alt="">
                               <p class="widget_name">Material Setting</p>
                            </span>
                            <!-- Add Door -->
@@ -488,7 +488,7 @@
                            </span>
    
                            <!-- Add Walls -->
-                           <span class="widget_span col-md-4"><img src="assets/images/icons/Add_walls.png" alt="">
+                           <span type="button" data-toggle="modal" data-target="#frame_46" class="widget_span col-md-4"><img src="assets/images/icons/Add_walls.png" alt="">
                               <p class="widget_name">Add Walls</p>
                            </span>
                            
@@ -513,7 +513,7 @@
                               <p class="widget_name">Main Setting</p>
                            </span>
                            <!-- Printer -->
-                           <span class="widget_span col-md-4 mr-auto"><img src="assets/images/icons/print.png" alt="">
+                           <span type="button" data-toggle="modal" data-target="#frame_56" class="widget_span col-md-4 mr-auto"><img src="assets/images/icons/print.png" alt="">
                               <p class="widget_name">Printer</p>
                            </span>
                         </div>
@@ -896,6 +896,7 @@
       </div>
    </div>
    </div>
+
          <!-- frame_48 Modal -->
          <div class="modal show" id="frame_48" tabindex="-1" aria-labelledby="frame_48Label" aria-hidden="true">
             <div class="modal-dialog " style="width:600px;">
@@ -1026,6 +1027,238 @@
                                  </div>
                                  <input type="text" class="w-100" placeholder="Insert here">
                               </div>
+   
+                           </div>
+                     </div>   
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- frame_46 Modal -->
+         <div class="modal show" id="frame_46" tabindex="-1" aria-labelledby="frame_46Label" aria-hidden="true">
+            <div class="modal-dialog " style="width:400px;">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title" id="main_settingsLabel">main_settings</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                           <img src="assets/images/icons/Multiply.png" alt="close" />
+                        </span>
+                     </button>
+                  </div>
+                  <div class="modal-body">
+
+                     <form>
+                        <div class="form-row">
+                          <div class="col-md-6">
+
+                           <div class="form-check mt-2">
+                              <input class="form-check-input" type="radio" name="walls" id="all_walls"
+                                 value="Center Material to Room">
+                              <label class="form-check-label" for="all_walls">All Walls</label>
+                           </div>
+
+                           <div class="form-check mt-2">
+                              <input class="form-check-input" type="radio" name="walls" id="remove_walls"
+                                 value="Center Material to Room">
+                              <label class="form-check-label" for="remove_walls">Remove All</label>
+                           </div>
+
+                           <div class="form-check mt-2">
+                              <input class="form-check-input" type="radio" name="walls" id="adjacent_walls"
+                                 value="Center Material to Room">
+                              <label class="form-check-label" for="adjacent_walls">Adjacent Walls</label>
+                           </div>
+
+                           <div class="form-check mt-2">
+                              <input class="form-check-input" type="radio" name="walls" id="common_floors"
+                                 value="Center Material to Room">
+                              <label class="form-check-label" for="common_floors">Common Floors</label>
+                           </div>
+
+                           <div class="form-check mt-2">
+                              <input class="form-check-input" type="radio" name="walls" id="selected_rooms"
+                                 value="Center Material to Room">
+                              <label class="form-check-label" for="selected_rooms">Selected Rooms</label>
+                           </div>
+
+                           <div class="form-check mt-2">
+                              <button type="submit" class="btn btn-light">Apply</button>
+                           </div>
+
+                          </div>
+                          <div class="col-md-6">
+                            <input type="range" class="form-control" placeholder="Last name">
+                            <input type="range" class="form-control" placeholder="Last name">
+                          </div>
+                        </div>
+                      </form>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- frame_53 Modal -->
+         <div class="modal show" id="frame_53" tabindex="-1" aria-labelledby="frame_53Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" style="width:800px;">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title" id="main_settingsLabel">main_settings</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                           <img src="assets/images/icons/Multiply.png" alt="close" />
+                        </span>
+                     </button>
+                  </div>
+                  <div class="modal-body">
+                     <div>
+                        <form action="#">
+                           
+                           <div class="form-group row pt-3">
+
+                              <!-- Material -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Material</label>
+                                 </div>
+                                 <input type="text" class="w-100" placeholder="Insert here">
+                              </div>
+                              <!-- Color -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Color</label>
+                                 </div>
+                                 <input type="text" class="w-100">
+                              </div>
+                              <!-- Net Area -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Net Area</label>
+                                 </div>
+                                 <input type="text" class="w-100 input-transparent" placeholder="Insert here">
+                              </div>
+                              <!-- Gross -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Gross</label>
+                                 </div>
+                                 <input type="text" class="w-100 input-transparent" placeholder="Insert here">
+                              </div>
+                              <!-- Waste -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Waste</label>
+                                 </div>
+                                 <input type="text" class="w-100 input-transparent" placeholder="Insert here">
+                              </div>
+                              <!-- Perimeter Base -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Perimeter Base</label>
+                                 </div>
+                                 <input type="text" class="w-100 input-transparent" placeholder="Insert here">
+                              </div>
+                              
+
+   
+                           </div>
+
+                           <div class="form-group row pt-3">
+
+                              <!-- Material -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Material</label>
+                                 </div>
+                                 <input type="text" class="w-100" placeholder="Insert here">
+                              </div>
+                              <!-- Color -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Color</label>
+                                 </div>
+                                 <input type="text" class="w-100">
+                              </div>
+                              <!-- Net Area -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Net Area</label>
+                                 </div>
+                                 <input type="text" class="w-100 input-transparent" placeholder="Insert here">
+                              </div>
+                              <!-- Gross -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Gross</label>
+                                 </div>
+                                 <input type="text" class="w-100 input-transparent" placeholder="Insert here">
+                              </div>
+                              <!-- Waste -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Waste</label>
+                                 </div>
+                                 <input type="text" class="w-100 input-transparent" placeholder="Insert here">
+                              </div>
+                              <!-- Perimeter Base -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Perimeter Base</label>
+                                 </div>
+                                 <input type="text" class="w-100 input-transparent" placeholder="Insert here">
+                              </div>
+                              
+
+   
+                           </div>
+
+                           <div class="form-group row pt-3">
+
+                              <!-- Material -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Material</label>
+                                 </div>
+                                 <input type="text" class="w-100" placeholder="Insert here">
+                              </div>
+                              <!-- Color -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Color</label>
+                                 </div>
+                                 <input type="text" class="w-100">
+                              </div>
+                              <!-- Net Area -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Net Area</label>
+                                 </div>
+                                 <input type="text" class="w-100 input-transparent" placeholder="Insert here">
+                              </div>
+                              <!-- Gross -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Gross</label>
+                                 </div>
+                                 <input type="text" class="w-100 input-transparent" placeholder="Insert here">
+                              </div>
+                              <!-- Waste -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Waste</label>
+                                 </div>
+                                 <input type="text" class="w-100 input-transparent" placeholder="Insert here">
+                              </div>
+                              <!-- Perimeter Base -->
+                              <div class="col-2 mt-3">
+                                 <div>
+                                    <label>Perimeter Base</label>
+                                 </div>
+                                 <input type="text" class="w-100 input-transparent" placeholder="Insert here">
+                              </div>
+                              
+
    
                            </div>
                      </div>   
@@ -1622,6 +1855,47 @@
          </div>
       </div>
    </div>
+   <!-- mail modal -->
+   <div class="modal fade" id="mail" tabindex="-1" aria-labelledby="mailLabel" aria-hidden="true"
+      data-backdrop="static" aria-hidden="true">
+      <div class="modal-dialog " style="width:306px; ">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body" style="justify-content: space-between;
+               display: flex;
+               flex-direction: column;">
+
+               <div class="text-center my-5">
+                  <label>Send Binding To:</label>
+               </div>
+
+               <div class="ml-3">
+                  <form action="#">
+                     <div>
+                        <label for="recepient_email">Recipient’s Email</label>
+                     </div>
+                     <div>
+                        <input type="text" id="recepient_email" placeholder="example@gmail.com">
+                     </div>
+                  </form>
+               </div>
+
+               <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-light">Add more file</button>
+                  <button type="submit" class="btn btn-light">Finish</button>
+               </div>
+
+
+            </div>
+         </div>
+      </div>
+   </div>
 
    <!-- chat modal -->
    <div class="modal fade chat" id="chat" tabindex="-1" aria-labelledby="chatLabel" aria-hidden="true"
@@ -1725,6 +1999,40 @@
                      </div>
                   </div>
                </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+      <!-- frame_56 modal -->
+      <div class="modal fade" id="frame_56" tabindex="-1" aria-labelledby="frame_56Label" aria-hidden="true"
+      data-backdrop="static" aria-hidden="true">
+      <div class="modal-dialog " style="width:546px; ">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body">
+
+
+               <div class="">
+                  <form action="#">
+                     <label for="">Materials</label>
+                     <div>
+                        <textarea name="" id="" cols="18" rows="16">- 2 Days Before</textarea>
+                     </div>
+                  </form>
+               </div>
+
+               <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-light">Next</button>
+               </div>
+
+
             </div>
          </div>
       </div>
