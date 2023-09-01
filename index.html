@@ -685,7 +685,7 @@
                               <p class="widget_name">Border</p>
                            </span>
                            <!-- Room Setting -->
-                           <span class="widget_span col-md-4"><img src="assets/images/icons/room_setting.png" alt="">
+                           <span type="button" data-toggle="modal" data-target="#frame_56" class="widget_span col-md-4"><img src="assets/images/icons/room_setting.png" alt="">
                               <p class="widget_name">Room Setting</p>
                            </span>
                            <!-- Add Text -->
@@ -728,7 +728,7 @@
                               <p class="widget_name">Main Setting</p>
                            </span>
                            <!-- Printer -->
-                           <span type="button" data-toggle="modal" data-target="#frame_56" class="widget_span col-md-4 mr-auto"><img src="assets/images/icons/print.png" alt="">
+                           <span type="button" data-toggle="modal" data-target="#printpdf" class="widget_span col-md-4 mr-auto"><img src="assets/images/icons/print.png" alt="">
                               <p class="widget_name">Printer</p>
                            </span>
                         </div>
@@ -3317,7 +3317,7 @@
                   </span>
                </button>
             </div>
-            <div class="modal-body" style="height: 400px; ">
+            <div class="modal-body bg-white" style="height: 400px; ">
                <form action="" class="pb-2">
                   <div class="input-group">
                      <input type="search" class="form-control search" id="search" placeholder="Search">
@@ -3328,7 +3328,7 @@
                <div class="scrollbar py-2" style=" height: 340px; overflow: auto; ">
                   <div class="notification pr-2" style="max-height: 300px;">
                      <div class="d-flex justify-content-between  py-2">
-                        <div class="media  align-items-center">
+                        <div class="media  align-items-center" type="button" data-toggle="modal" data-target="#chat_open">
                            <div class="position-relative">
                               <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
                                  alt="Not_Show">
@@ -3340,7 +3340,7 @@
                         </div>
                         <p>sun</p>
                      </div>
-                     <div class="d-flex justify-content-between  py-2">
+                     <div class="d-flex justify-content-between  py-2" type="button" data-toggle="modal" data-target="#chat_open">
                         <div class="media  align-items-center">
                            <img src="assets/images/chat-modal/demo.png" class="mr-3 img-fluid rounded-circle"
                               alt="Not_Show">
@@ -3678,17 +3678,20 @@
                         <!-- Dotted_style collapsed  -->
                         <ul class="collapse show list-unstyled pl-4 w-100" id="Dotted_style">
                             <li class="nav-item">
-                                <a class="nav-link pl-1" href="#">                 
+                                <a class="nav-link pl-1" href="#">    
+                                 <span class="tiny_box" style="background-image: url('assets/images/styles/style_1.png');"></span>             
                                  <span class="ml-1 item-text">Style - 1</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-1" href="#">                 
+                                <a class="nav-link pl-1" href="#">     
+                                 <span class="tiny_box" style="background-image: url('assets/images/styles/style_2.png');"></span>                         
                                  <span class="ml-1 item-text">Style - 2</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-1" href="#">                 
+                                <a class="nav-link pl-1" href="#">   
+                                 <span class="tiny_box" style="background-image: url('assets/images/styles/style_3.png');"></span>                           
                                  <span class="ml-1 item-text">Style - 3</span>
                                 </a>
                             </li>
@@ -3701,17 +3704,20 @@
                         <!-- Strips_style collapsed  -->
                         <ul class="collapse show list-unstyled pl-4 w-100" id="Strips_style">
                             <li class="nav-item">
-                                <a class="nav-link pl-1" href="#">                 
+                                <a class="nav-link pl-1" href="#">     
+                                 <span class="tiny_box" style="background-image: url('assets/images/styles/style_4.png');"></span>                         
                                  <span class="ml-1 item-text">Style - 1</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-1" href="#">                 
+                                <a class="nav-link pl-1" href="#"> 
+                                 <span class="tiny_box" style="background-image: url('assets/images/styles/style_6.png');"></span>                             
                                  <span class="ml-1 item-text">Style - 2</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-1" href="#">                 
+                                <a class="nav-link pl-1" href="#">  
+                                 <span class="tiny_box" style="background-image: url('assets/images/styles/style_5.png');"></span>                            
                                  <span class="ml-1 item-text">Style - 3</span>
                                 </a>
                             </li>
@@ -3725,12 +3731,14 @@
                         <!-- Triangles_style collapsed  -->
                         <ul class="collapse show list-unstyled pl-4 w-100" id="Triangles_style">
                             <li class="nav-item">
-                                <a class="nav-link pl-1" href="#">                 
+                                <a class="nav-link pl-1" href="#">  
+                                 <span class="tiny_box" style="background-image: url('assets/images/styles/style_1.png');"></span>                            
                                  <span class="ml-1 item-text">Style - 1</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-1" href="#">                 
+                                <a class="nav-link pl-1" href="#"> 
+                                 <span class="tiny_box" style="background-image: url('assets/images/styles/style_2.png');"></span>                             
                                  <span class="ml-1 item-text">Style - 2</span>
                                 </a>
                             </li>
@@ -3744,12 +3752,14 @@
                         <!-- Checkerboards_style collapsed  -->
                         <ul class="collapse show list-unstyled pl-4 w-100" id="Checkerboards_style">
                             <li class="nav-item">
-                                <a class="nav-link pl-1" href="#">                 
+                                <a class="nav-link pl-1" href="#">          
+                                 <span class="tiny_box" style="background-image: url('assets/images/styles/style_1.png');"></span>                    
                                  <span class="ml-1 item-text">Style - 1</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-1" href="#">                 
+                                <a class="nav-link pl-1" href="#">  
+                                 <span class="tiny_box" style="background-image: url('assets/images/styles/style_3.png');"></span>                            
                                  <span class="ml-1 item-text">Style - 2</span>
                                 </a>
                             </li>
@@ -3763,7 +3773,8 @@
                         <!-- Waves_style collapsed  -->
                         <ul class="collapse show list-unstyled pl-4 w-100" id="Waves_style">
                             <li class="nav-item">
-                                <a class="nav-link pl-1" href="#">                 
+                                <a class="nav-link pl-1" href="#">       
+                                 <span class="tiny_box" style="background-image: url('assets/images/styles/style_8.png');"></span>                       
                                  <span class="ml-1 item-text">Style - 1</span>
                                 </a>
                             </li>
@@ -3824,6 +3835,192 @@
       </div>
    </div>
 
+   <!-- Modal -->
+<div class="modal fade modal-fullscreen px-0" id="printpdf" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+   <div class="modal-dialog">
+     <div class="modal-content">
+
+       <div class="modal-body">
+         <section>
+            <div class="bg-dark-gray py-3">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-6">
+                    <button type="button" style="float: left; color: white;" class="close" data-dismiss="modal" aria-label="Close">
+                     <img src="assets/images/icons/Left_Arrow.png" alt="">
+                  </button>
+                  </div>
+                  <div class="col-6">
+                    <ul class="d-flex justify-content-end">
+                      <li class="mx-2">
+                        <a href="#">
+                        <img src="assets/images/icons/pdf.png" alt="">
+                        </a>
+                      </li>
+                      <li class="mx-2">
+                        <a href="#">
+                        <img src="assets/images/icons/download.png" alt="">
+                        </a>
+                      </li>
+                      <li class="mx-2">
+                        <a href="#" id="printpdf_button">
+                        <img src="assets/images/icons/print_pdf.png" alt="">
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <h2 class="d-inline font-weight-bolder">MOUNT SINAI MEDICAL CENTER</h2>
+                      <h2 class="float-lg-right mb-0 font-weight-bolder">Flooring Takeoff</h2>
+                      <h2 class="date font-weight-bolder">4300 ALTON ROAD MIAMI BEACH, FLORIDA 33140</h2>
+                      <h6 class="date">02 june 2018 : MOUNT SINAI MEDICAL CENTER-4300 ALTON ROAD MIAMI BEACH, FLORIDA 33140</h6>
+                      <h5 class="date">CANNONDESIIGN</h5>
+                      <h6 class="date font-weight-bold">Ao101A4. 1 -Ao101A4. 1 DATED 2/22/19</h6>
+                      <h4>Summary Report</h4>
+                    </div>
+                  </div>
+              
+                  <!-- table -->
+                  <div class="row">
+                    <table class="table table-borderless mt-5">
+                      <thead class="border-bottom">
+                        <tr>
+                          <th scope="col">area</th>
+                          <th scope="col">net</th>
+                          <th scope="col">gram</th>
+                          <th scope="col">waste</th>
+                          <th scope="col">permeter</th>
+                          <th scope="col">base</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row"><div style=" display: inline-block;    width: 130px;
+                              height: 30px;
+                              background-color: brown;
+                              border: 2px solid black;"></div></th>
+                          <td colspan="3">RP-1SPEC: 096723,MANUFACTURE:STDNEHARD,STONSHIELD UTS COLOR=TBD</td>
+                          
+                        </tr>
+                        <tr>
+                          <th class="" scope="row ">2</th>
+                          <td>31</td>
+                          <td>1287.37sf</td>
+                          <td>0.00fs</td>
+                          <td>342"11,22"</td>
+                        </tr>
+                        <thead class="border-bottom">
+                          <tr>
+                            <th scope="col">area count-1</th>
+                            <th scope="col">1287.37sf</th>
+                            <th scope="col">0.00fs</th>
+                            <th scope="col">***</th>
+                            <th scope="col">442"11,22"</th>
+                          </tr>
+                        </thead>
+                      </tbody>
+                    </table>
+                    <table class="table table-borderless mt-5">
+                      <thead class="border-bottom">
+                        <tr>
+                          <th scope="col">area</th>
+                          <th scope="col">net</th>
+                          <th scope="col">gram</th>
+                          <th scope="col">waste</th>
+                          <th scope="col">permeter</th>
+                          <th scope="col">base</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row"><div style=" display: inline-block;    width: 130px;
+                              height: 30px;
+                              background-color: rgb(42, 50, 165);
+                              border: 2px solid black;"></div></th>
+                          <td colspan="3">RP-1SPEC: 096723,MANUFACTURE:STDNEHARD,STONSHIELD UTS COLOR=TBD</td>
+      
+                        </tr>
+                        <tr>
+                          <th class="" scope="row ">2</th>
+                          <td>31</td>
+                          <td>1287.37sf</td>
+                          <td>0.00fs</td>
+                          <td>342"11,22"</td>
+                        </tr>
+                        <thead class="border-bottom">
+                          <tr>
+                            <th scope="col">area count-1</th>
+                            <th scope="col">1287.37sf</th>
+                            <th scope="col">0.00fs</th>
+                            <th scope="col">***</th>
+                            <th scope="col">442"11,22"</th>
+                          </tr>
+                        </thead>
+                      </tbody>
+                    </table>
+                    <table class="table table-borderless mt-5">
+                      <thead class="border-bottom">
+                        <tr>
+                          <th scope="col">area</th>
+                          <th scope="col">net</th>
+                          <th scope="col">gram</th>
+                          <th scope="col">waste</th>
+                          <th scope="col">permeter</th>
+                          <th scope="col">base</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row"><div style=" display: inline-block;    width: 130px;
+                              height: 30px;
+                              background-color: rgb(29, 177, 71);
+                              border: 2px solid black;"></div></th>
+                          <td colspan="3">RP-1SPEC: 096723,MANUFACTURE:STDNEHARD,STONSHIELD UTS COLOR=TBD</td>
+      
+                        </tr>
+                        <tr>
+                          <th class="" scope="row ">2</th>
+                          <td>31</td>
+                          <td>1287.37sf</td>
+                          <td>0.00fs</td>
+                          <td>342"11,22"</td>
+                        </tr>
+                        <thead class="border-bottom">
+                          <tr>
+                            <th scope="col">area count-1</th>
+                            <th scope="col">1287.37sf</th>
+                            <th scope="col">0.00fs</th>
+                            <th scope="col">***</th>
+                            <th scope="col">442"11,22"</th>
+                          </tr>
+                        </thead>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+      
+              
+            <div class="bg-dark-gray py-4">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12">
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </section>
+
+       </div>
+
+     </div>
+   </div>
+ </div>
 
    </div>
    <!-- JavaScript -->
@@ -3878,10 +4075,11 @@
             var border_color = $('#border_color_input').val();
             $(".border_color_card").css("background-color", border_color);
       });
+      
+      
+   });
 
 
-
-      });
    </script>
 </body>
 
