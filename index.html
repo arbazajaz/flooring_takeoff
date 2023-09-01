@@ -23,28 +23,16 @@
    <div class="container-fluid">
 
      <div class="row bg-white shadow">
-       <!-- Product name  -->
-       <div class="col-sm-6 pt-2">
-         <div>
-           <img src="assets/images/flooring/logo.png" alt="">
-         </div>
-       </div>
 
-       <!-- close minimise fullscreen icons  -->
-       <div class="col-sm-6 text-right">
-         <div class="d-flex justify-content-end">
-           <!-- minimise icon  -->
-           <a class="btn" href="#"><img src="assets/images/icons/minimize.png" alt="minimise" /></a>
-           <!-- close icon  -->
-           <a class="btn" href="#"><img src="assets/images/icons/fullscreen.png" alt="fullscreen" /></a>
-           <!-- close icon  -->
-           <a class="btn" href="#"><img src="assets/images/icons/Multiply.png" alt="close" /></a>
-         </div>
-       </div>
 
        <!-- top navigation menu -->
        <div class="col-12 pt-3 pb-2">
-
+         
+        <div class="d-flex align-items-end">
+         <div class="d-inline-block">
+            <img src="assets/images/flooring/logo.png" alt="">
+          </div>
+          
          <div class="accordion d-flex" id="menu_accordian">
 
            <!-- File -->
@@ -498,14 +486,16 @@
                  <a class="dropdown-item" href="#">TeamViewer Support</a>
 
                  <a class="dropdown-item" href="#">Check for updates</a>
+                 <a class="dropdown-item" href="#">About Flooring Takeoff</a>
+
                </div>
-               <a class="dropdown-item" href="#">About Callidus</a>
 
 
              </div>
 
            </div>
          </div>
+        </div>
 
        </div>
      </div>
@@ -571,7 +561,7 @@
                      </span>
 
                      <!-- Add Drawing -->
-                     <span type="button" data-toggle="modal" data-target="#frame_48"  class="widget_span"><img src="assets/images/icons/Add_File.png" alt="">
+                     <span type="button" data-toggle="modal" data-target="#frame_47"  class="widget_span"><img src="assets/images/icons/Add_File.png" alt="">
                         <p class="widget_name">Add Drawing</p>
                      </span>
 
@@ -582,12 +572,12 @@
                      </span>
 
                      <!-- Tile Design -->
-                     <span class="widget_span"><img src="assets/images/icons/color_tile_design.png" alt="">
+                     <span type="button" data-toggle="modal" data-target="#frame_83"  class="widget_span"><img src="assets/images/icons/color_tile_design.png" alt="">
                         <p class="widget_name">Tile Design</p>
                      </span>
 
                      <!-- Save -->
-                     <span class="widget_span"><img src="assets/images/icons/save.png" alt="">
+                     <span  type="button" data-toggle="modal" data-target="#frame_82"   class="widget_span"><img src="assets/images/icons/save.png" alt="">
                         <p class="widget_name">Save</p>
                      </span>
 
@@ -658,7 +648,7 @@
                               <p class="widget_name">Multiply Draw</p>
                            </span>
                            <!-- Automatic -->
-                           <span class="widget_span col-md-4"><img src="assets/images/icons/Automate.png" alt="">
+                           <span type="button" data-toggle="modal" data-target="#frame_84"class="widget_span col-md-4"><img src="assets/images/icons/Automate.png" alt="">
                               <p class="widget_name">Automatic</p>
                            </span>
                            <!-- Add Base -->
@@ -704,7 +694,7 @@
                            </span>
    
                            <!-- Add Walls -->
-                           <span type="button" data-toggle="modal" data-target="#" class="widget_span col-md-4"><img src="assets/images/icons/Add_walls.png" alt="">
+                           <span type="button" data-toggle="modal" data-target="#chat_open" class="widget_span col-md-4"><img src="assets/images/icons/Add_walls.png" alt="">
                               <p class="widget_name">Add Walls</p>
                            </span>
                            
@@ -942,9 +932,6 @@
                      <form action="#">
                         <div class="form-group row">
                            <div class="col-12 text-center">
-                              <div>
-                                 <img src="assets/images/flooring/insert_material_color.png" alt="">
-                              </div>
 
                               <div class="row justify-content-center">
                                  <div class="col-6 position-relative">
@@ -1005,7 +992,6 @@
          <div class="modal-dialog " style="width:600px;">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title" id="main_settingsLabel">main_settings</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true">
                         <img src="assets/images/icons/Multiply.png" alt="close" />
@@ -1144,7 +1130,6 @@
             <div class="modal-dialog " style="width:600px;">
                <div class="modal-content">
                   <div class="modal-header">
-                     <h5 class="modal-title" id="main_settingsLabel">main_settings</h5>
                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">
                            <img src="assets/images/icons/Multiply.png" alt="close" />
@@ -1282,7 +1267,6 @@
             <div class="modal-dialog " style="width:400px;">
                <div class="modal-content">
                   <div class="modal-header">
-                     <h5 class="modal-title" id="main_settingsLabel">main_settings</h5>
                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">
                            <img src="assets/images/icons/Multiply.png" alt="close" />
@@ -1359,13 +1343,61 @@
 
                           </div>
 
-                          <div class="col-10">
-                              <div class="colors_card">
-                                 <div class="form-row">
-                                    <div class="col-2"><input type="radio" name="ccolor" value="green" onclick="changeclr(this)"></div>
-                                    <div class="col-10"><label for=""></label></div>
-                                     
-                                 </div>
+                          <div class="col-8 mt-3">
+                              <div class="colors_card border py-2">
+
+
+                                <div>
+                                 <input id="none_color" type="radio" name="ccolor" value="#FFFFFF" onclick="changeclr(this)" hidden>
+                                 <label class="mb-0" for="none_color">
+                                    <div class="form-row align-items-center color-input">
+                                       <div class="col-3"><div style="width: 15px; height: 15px; background-color: #FFFFFF; margin: 0px auto;"></div></div>
+                                       <div class="col-9"><div>None</div></div>
+                                    </div>
+                                 </label>
+                                </div>
+
+                                <div>
+                                 <input id="FFFF00_color" type="radio" name="ccolor" value="#FFFF00" onclick="changeclr(this)" hidden>
+                                 <label class="mb-0" for="FFFF00_color">
+                                    <div class="form-row align-items-center color-input">
+                                       <div class="col-3"><div style="width: 15px; height: 15px; background-color: #FFFF00; margin: 0px auto;"></div></div>
+                                       <div class="col-9"><div>Ceramic Base-1</div></div>
+                                    </div>
+                                 </label>
+                                </div>
+
+                                <div>
+                                 <input id="00FFFF_color" type="radio" name="ccolor" value="#00FFFF" onclick="changeclr(this)" hidden>
+                                 <label class="mb-0" for="00FFFF_color">
+                                    <div class="form-row align-items-center color-input">
+                                       <div class="col-3"><div style="width: 15px; height: 15px; background-color: #00FFFF; margin: 0px auto;"></div></div>
+                                       <div class="col-9"><div>Vinyl Base-1</div></div>
+                                    </div>
+                                 </label>
+                                </div>
+
+                                <div>
+                                 <input id="008080_color" type="radio" name="ccolor" value="#008080" onclick="changeclr(this)" hidden>
+                                 <label class="mb-0" for="008080_color">
+                                    <div class="form-row align-items-center color-input">
+                                       <div class="col-3"><div style="width: 15px; height: 15px; background-color: #008080; margin: 0px auto;"></div></div>
+                                       <div class="col-9"><div>Stone Saddle-1</div></div>
+                                    </div>
+                                 </label>
+                                </div>
+
+                                <div>
+                                 <input id="12A6D4_color" type="radio" name="ccolor" value="#12A6D4" onclick="changeclr(this)" hidden>
+                                 <label class="mb-0" for="12A6D4_color">
+                                    <div class="form-row align-items-center color-input">
+                                       <div class="col-3"><div style="width: 15px; height: 15px; background-color: #12A6D4; margin: 0px auto;"></div></div>
+                                       <div class="col-9"><div>Schluter-1</div></div>
+                                    </div>
+                                 </label>
+                                </div>
+
+
                               </div>
                           </div>
 
@@ -1381,7 +1413,6 @@
             <div class="modal-dialog " style="width:400px;">
                <div class="modal-content">
                   <div class="modal-header">
-                     <h5 class="modal-title" id="main_settingsLabel">main_settings</h5>
                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">
                            <img src="assets/images/icons/Multiply.png" alt="close" />
@@ -1492,12 +1523,11 @@
                </div>
             </div>
          </div>
-         <!-- frame_56 Modal -->
-         <div class="modal show" id="frame_56" tabindex="-1" aria-labelledby="frame_56Label" aria-hidden="true">
-            <div class="modal-dialog " style="width:470px;">
+         <!-- frame_84 Modal -->
+         <div class="modal show" id="frame_84" tabindex="-1" aria-labelledby="frame_84Label" aria-hidden="true">
+            <div class="modal-dialog " style="width: 600px;">
                <div class="modal-content">
                   <div class="modal-header">
-                     <h5 class="modal-title" id="main_settingsLabel">main_settings</h5>
                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">
                            <img src="assets/images/icons/Multiply.png" alt="close" />
@@ -1508,38 +1538,662 @@
 
                      <form>
                         <div class="form-row">
-                           <div class="col-md-6 my-3">
+                           <div class="col-md-5 my-3">
                               <label>Materials </label>
-                              <div class="card bg-white dropdown-card overflow-auto">
+                              <form action="#">
+                                 <div class="form-group row">
+                                    <!-- Name -->
+                                    <div class="col-12 mt-2">
+                                       <div>
+                                          <label>Name</label>
+                                       </div>
+                                       <input type="text" class="w-100" value="Turf Carpet - TB">
+                                    </div>
+                                    <!-- Vendor -->
+                                    <div class="col-12 mt-2">
+                                       <div>
+                                          <label>Vendor</label>
+                                       </div>
+                                       <input type="text" class="w-100" value="Roll">
+                                    </div>
+                                    <!-- Manufacturer -->
+                                    <div class="col-12 mt-2">
+                                       <div>
+                                          <label>Manufacturer</label>
+                                       </div>
+                                       <input type="text" class="w-100" value="Jeans Carpet">
+                                    </div>
+                                    <!-- Waste Add On -->
+                                    <div class="col-12 mt-2">
+                                       <div>
+                                          <label>Waste Add On</label>
+                                       </div>
+                                       <input type="text" class="w-100" value="5%">
+                                    </div>
+                                  
+
+                                    <!-- Waste Add On -->
+                                    <div class="col-12 mt-2 text-center">
+                                       <div class="row justify-content-center">
+                                          <button type="submit" class="btn btn-light col-7">Pattern Repeat</button>
+                                       </div>
+                                       <div class="row justify-content-center mt-1">
+                                          <button type="submit" class="btn btn-light col-7">T - Seams</button>
+                                       </div>
+                                    </div>
+
+                                      <!-- Roll Width -->
+                                      <div class="col-12 mt-2">
+                                       <div>
+                                          <label>Roll Width</label>
+                                       </div>
+                                       <input type="text" class="w-100" value="36”">
+                                    </div>
+
+                                      <!-- seam Overlap -->
+                                      <div class="col-12 mt-2">
+                                       <div>
+                                          <label>seam Overlap</label>
+                                       </div>
+                                       <input type="text" class="w-100" value="5%1-3/4”">
+                                    </div>
+                                      <!-- Cutting Tolerance -->
+                                      <div class="col-12 mt-2">
+                                       <div>
+                                          <label>Cutting Tolerance</label>
+                                       </div>
+                                       <input type="text" class="w-100">
+                                    </div>
+
+            
+                                 </div>
+                              </form>
+                           </div>
+
+                           <div class="col-md-7 mt-5">
+                              <div class="card bg-white dropdown-card h-300 scrollbar overflow-auto">
+                                 <div class="scrollbar" style="max-height: 300px;">
+                                   
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                       <li class="nav-item" role="presentation">
+
+                                          <a href="#" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                             <img src="assets/images/icons/plus_box.png" alt="">
+                                             <span class="ml-1 item-text">Rubber</span>
+                                         </a>
+                                         
+                                         <!-- Rubber_Flooring_TBD1 -->
+                                         <span class="image_tabs active" id="Rubber_Flooring_TBD1-tab" data-toggle="tab" data-target="#Rubber_Flooring_TBD1" type="button" role="tab" aria-controls="Rubber_Flooring_TBD1" aria-selected="true"> <span class="tiny_box" style="  background-color: #c0c0c0;
+                                          "></span>
+                                          Rubber Flooring - TBD
+                                         </span>
+
+                                       </li>
+
+                                       <li class="nav-item" role="presentation">
+                                          <a href="#" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                             <img src="assets/images/icons/plus_box.png" alt="">
+                                             <span class="ml-1 item-text">Ceramic</span>
+                                         </a>
+
+                                         <!-- Ceramic_Tile_TBD1 -->
+                                         <span class="image_tabs" id="Ceramic_Tile_TBD1-tab" data-toggle="tab" data-target="#Ceramic_Tile_TBD1" type="button" role="tab" aria-controls="Ceramic_Tile_TBD1" aria-selected="false">
+                                          <span class="tiny_box" style="  background-color: #0080FF;
+                                          "></span>
+                                          Ceramic Tile - TBD
+                                         </span>
+                                       </li>
+
+                                       <li class="nav-item" role="presentation">
+                                          <a href="#" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                             <img src="assets/images/icons/plus_box.png" alt="">
+                                             <span class="ml-1 item-text">Other</span>
+                                         </a>
+
+                                         <!-- Turf_Carpet_TBD1  -->
+                                         <span class="image_tabs " id="Turf_Carpet_TBD1-tab" data-toggle="tab" data-target="#Turf_Carpet_TBD1" type="button" role="tab" aria-controls="Turf_Carpet_TBD1" aria-selected="false">
+                                          <span class="tiny_box" style="  background-color: #009300;
+                                          "></span>
+                                          Turf Carpet - TBD
+                                         </span>
+                                       </li>
+
+                                       <li class="nav-item" role="presentation">
+                                          <a href="#" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                             <img src="assets/images/icons/plus_box.png" alt="">
+                                             <span class="ml-1 item-text">Base</span>
+                                         </a>
+
+                                         <!-- Ceramic_Base_1_1 -->
+                                         <span class="image_tabs " id="Ceramic_Base_1_1-tab" data-toggle="tab" data-target="#Ceramic_Base_1_1" type="button" role="tab" aria-controls="Ceramic_Base_1_1" aria-selected="false">
+                                          <span class="tiny_box" style="  background-color: #FFFF00;
+                                          "></span>
+                                          Ceramic Base - 1
+                                         </span>
+                                       </li>
+
+                                       <li class="nav-item" role="presentation">
+
+                                          <!-- Vinyl_Base_1_1 -->
+                                         <span class="image_tabs " id="Vinyl_Base_1_1-tab" data-toggle="tab" data-target="#Vinyl_Base_1_1" type="button" role="tab" aria-controls="Vinyl_Base_1_1" aria-selected="false">
+                                          <span class="tiny_box" style="  background-color: #00FFFF;
+                                          "></span>
+                                          Vinyl Base - 1
+                                         </span>
+                                       </li>
+                                       <li class="nav-item" role="presentation">
+
+                                          <!-- stone_Saddle_1_1 -->
+                                         <span class="image_tabs " id="stone_Saddle_1_1-tab" data-toggle="tab" data-target="#stone_Saddle_1_1" type="button" role="tab" aria-controls="stone_Saddle_1_1" aria-selected="false">
+                                          <span class="tiny_box" style="  background-color: #008080;
+                                          "></span>
+                                          stone Saddle - 1
+                                         </span>
+                                       </li>
+                                       <li class="nav-item" role="presentation">
+
+                                          <!-- Schluter_1_1 -->
+                                         <span class="image_tabs " id="Schluter_1_1-tab" data-toggle="tab" data-target="#Schluter_1_1" type="button" role="tab" aria-controls="Schluter_1_1" aria-selected="false">
+                                          <span class="tiny_box" style="  background-color: #12A6D4;
+                                          "></span>
+                                          Schluter - 1
+                                         </span>
+                                       </li>
+                                     </ul>
+
+                                 </div>
+                              </div>
+
+                              <div class="">
+                                 
+                                 <div class="tab-content" id="myTabContent">
+                                    <!-- materials_image -->
+                                    <div class="tab-pane fade show active" id="Rubber_Flooring_TBD1" role="tabpanel" aria-labelledby="Rubber_Flooring_TBD1-tab">
+                                       <img src="assets/images/materials/Rubber_Flooring_TBD.png" alt="">
+                                    </div>
+
+                                    <!-- Ceramic_Tile_TBD -->
+                                    <div class="tab-pane fade" id="Ceramic_Tile_TBD1" role="tabpanel" aria-labelledby="Ceramic_Tile_TBD1-tab">
+                                       <img src="assets/images/materials/Ceramic_Tile_TBD.png" alt="">
+                                    </div>
+
+                                    <!-- Turf_Carpet_TBD -->
+                                    <div class="tab-pane fade" id="Turf_Carpet_TBD1" role="tabpanel" aria-labelledby="Turf_Carpet_TBD1-tab">
+                                       <img src="assets/images/materials/Turf_Carpet _TBD.png" alt="">
+                                    </div>
+
+                                    <!-- Ceramic_Base_1 -->
+                                    <div class="tab-pane fade" id="Ceramic_Base_1_1" role="tabpanel" aria-labelledby="Ceramic_Base_1_1-tab">
+                                       <img src="assets/images/materials/Ceramic_Base_1.png" alt="">
+                                    </div>
+
+                                    <!-- Vinyl_Base_1 -->
+                                    <div class="tab-pane fade" id="Vinyl_Base_1_1" role="tabpanel" aria-labelledby="Vinyl_Base_1_1-tab">
+                                       <img src="assets/images/materials/Vinyl_Base_1.png" alt="">
+                                    </div>
+
+                                    <!-- stone_Saddle_1 -->
+                                    <div class="tab-pane fade" id="stone_Saddle_1_1" role="tabpanel" aria-labelledby="stone_Saddle_1_1-tab">
+                                       <img src="assets/images/materials/stone_Saddle_1.png" alt="">
+                                    </div>
+
+                                    <!-- Schluter_1 -->
+                                    <div class="tab-pane fade" id="Schluter_1_1" role="tabpanel" aria-labelledby="Schluter_1_1-tab">
+                                       <img src="assets/images/materials/Schluter_1.png" alt="">
+                                    </div>
+                                  </div>
+                              </div>
+
+                           </div>
+
+
+                           <div class="col-12">
+                              <div class="row text-center justify-content-center">
+                                 <div class="col-3 p-0">
+                                    <button type="submit" class="btn btn-light m-0">Edit Color</button>
+                                 </div>
+                                 <div class="col-3 p-0">
+                                    <button type="submit" class="btn btn-light m-0">Edit Pattern</button>
+                                 </div>
+                                 <div class="col-3 p-0">
+                                    <button type="submit" class="btn btn-light m-0">Edit Hatch</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                      </form>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- frame_56 Modal -->
+         <div class="modal show" id="frame_56" tabindex="-1" aria-labelledby="frame_56Label" aria-hidden="true">
+            <div class="modal-dialog " style="width: 600px;">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                           <img src="assets/images/icons/Multiply.png" alt="close" />
+                        </span>
+                     </button>
+                  </div>
+                  <div class="modal-body">
+
+                     <form>
+                        <div class="form-row">
+                           <div class="col-md-5 my-3">
+                              <label>Materials </label>
+                              <div class="scrollbar card bg-white dropdown-card h-420 overflow-auto">
                                  <div class="scrollbar" style="max-height: 300px;">
                                     <li class="nav-item">
-                                       <a href="#ui-packages" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                       <!-- Concrete -->
+                                       <a href="#Concrete" data-toggle="collapse" aria-expanded="false" class="nav-link">
                                            <img src="assets/images/icons/plus_box.png" alt="">
                                            <span class="ml-1 item-text">Concrete</span>
                                        </a>
-                                       <ul class="collapse show list-unstyled pl-4 w-100" id="ui-packages">
+                                       <!-- Concrete collapsed  -->
+                                       <ul class="collapse show list-unstyled pl-4 w-100" id="Concrete">
                                            <li class="nav-item">
-                                               <a class="nav-link pl-1" href="./ui-color.html">                                         <img src="assets/images/icons/plus_box.png" alt="">
+                                               <a class="nav-link pl-1" href="#Sealed_Concrete_dropdown" data-toggle="collapse" aria-expanded="false" class="nav-link">                                        
+                                                 <img src="assets/images/icons/plus_box.png" alt="">
+   
+                                                <span class="ml-1 item-text">Sealed Concrete</span>
+                                               </a>
+
+                                               <ul class="collapse" id="Sealed_Concrete_dropdown">
+                                                
+                                                <li class="nav-item">
+                                                   <a class="nav-link pl-1" href="#">   
+                                                      <span class="tiny_box" style="  background-color: #252525;"></span>
+                                                    <span class="item-text">Concrete - 2</span>
+                                                   </a>
+                                               </li>
+
+                                                <li class="nav-item">
+                                                   <a class="nav-link pl-1" href="#">   
+                                                      <span class="tiny_box" style="  background-color: #3F3F3FA1;"></span>
+                                                    <span class="item-text">Concrete - 3</span>
+                                                   </a>
+                                               </li>
+
+                                                <li class="nav-item">
+                                                   <a class="nav-link pl-1" href="#">   
+                                                      <span class="tiny_box" style="  background-color: #363636;"></span>
+                                                    <span class="item-text">Concrete - 1</span>
+                                                   </a>
+                                               </li>
+
+                                               </ul>
+
+                                           </li>
+                                           <li class="nav-item">
+
+                                               <a class="nav-link pl-1" href="#Polished_Concrete_dropdown" data-toggle="collapse" aria-expanded="false" class="nav-link">                                        
+                                                <img src="assets/images/icons/plus_box.png" alt="">
+  
+                                               <span class="ml-1 item-text">Polished Concrete</span>
+                                              </a>
+
+                                              <ul class="collapse" id="Polished_Concrete_dropdown">
+                                               
+                                               <li class="nav-item">
+                                                  <a class="nav-link pl-1" href="#">   
+                                                     <span class="tiny_box" style="  background-color: #918E8E;"></span>
+                                                   <span class="item-text">Concrete - 4</span>
+                                                  </a>
+                                              </li>
+
+                                               <li class="nav-item">
+                                                  <a class="nav-link pl-1" href="#">   
+                                                     <span class="tiny_box" style="  background-color: #D0CACA;"></span>
+                                                   <span class="item-text">Concrete - 5</span>
+                                                  </a>
+                                              </li>
+
+                                               <li class="nav-item">
+                                                  <a class="nav-link pl-1" href="#">   
+                                                     <span class="tiny_box" style="  background-color: #F8F4F4;"></span>
+                                                   <span class="item-text">Concrete - 6</span>
+                                                  </a>
+                                              </li>
+
+                                              </ul>
+
+                                           </li>
+                                           <li class="nav-item">
+
+                                               <a class="nav-link pl-1" href="#Epoxy_dropdown" data-toggle="collapse" aria-expanded="false" class="nav-link">                                        
+                                                <img src="assets/images/icons/plus_box.png" alt="">
+  
+                                               <span class="ml-1 item-text">Epoxy</span>
+                                              </a>
+
+                                              <ul class="collapse" id="Epoxy_dropdown">
+                                               
+                                               <li class="nav-item">
+                                                  <a class="nav-link pl-1" href="#">   
+                                                     <span class="tiny_box" style="  background-color: #CECFB8;"></span>
+                                                   <span class="item-text">Epoxy - 1</span>
+                                                  </a>
+                                              </li>
+
+                                               <li class="nav-item">
+                                                  <a class="nav-link pl-1" href="#">   
+                                                     <span class="tiny_box" style="  background-color: #E9E3BE;"></span>
+                                                   <span class="item-text">Epoxy - 2</span>
+                                                  </a>
+                                              </li>
+
+
+                                              </ul>
+
+                                           </li>
+                                           <li class="nav-item">
+                                               <a class="nav-link pl-1" href="#">                                         <img src="assets/images/icons/plus_box.png" alt="">
+   
+                                                <span class="ml-1 item-text">Withdraw History</span>
+                                               </a>
+                                           </li>
+                                       </ul>
+                                       <!-- Wood_Flooring -->
+                                       <a href="#Wood_Flooring" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                           <img src="assets/images/icons/plus_box.png" alt="">
+                                           <span class="ml-1 item-text">Wood Flooring</span>
+                                       </a>
+
+                                       <ul class="collapse list-unstyled pl-4 w-100" id="Wood_Flooring">
+                                               
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #4D0F13;"></span>
+                                              <span class="item-text">Wood - 1</span>
+                                             </a>
+                                         </li>
+                                               
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #744245;"></span>
+                                              <span class="item-text">Wood - 2</span>
+                                             </a>
+                                         </li>
+                                               
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #AC9496;"></span>
+                                              <span class="item-text">Wood - 3</span>
+                                             </a>
+                                         </li>
+                                               
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #E6D3D4;"></span>
+                                              <span class="item-text">Wood - 4</span>
+                                             </a>
+                                         </li>
+
+
+
+                                         </ul>
+                                       <!-- VCT -->
+                                       <a href="#VCT" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                           <img src="assets/images/icons/plus_box.png" alt="">
+                                           <span class="ml-1 item-text">VCT</span>
+                                       </a>
+                                       <ul class="collapse list-unstyled pl-4 w-100" id="VCT">
+                                               
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #FF6502;"></span>
+                                              <span class="item-text">VCT - 1</span>
+                                             </a>
+                                         </li>
+                                               
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #FF6502CF;"></span>
+                                              <span class="item-text">VCT - 2</span>
+                                             </a>
+                                         </li>
+                                               
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #FF650296;"></span>
+                                              <span class="item-text">VCT - 3</span>
+                                             </a>
+                                         </li>
+                                               
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #FF65025E;"></span>
+                                              <span class="item-text">VCT - 4</span>
+                                             </a>
+                                         </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #FF650224;"></span>
+                                              <span class="item-text">VCT - 5</span>
+                                             </a>
+                                         </li>
+                                              
+                                         </ul>
+                                       <!-- Ceramic -->
+                                       <a href="#Ceramic" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                           <img src="assets/images/icons/plus_box.png" alt="">
+                                           <span class="ml-1 item-text">Ceramic</span>
+                                       </a>
+                                       <ul class="collapse list-unstyled pl-4 w-100" id="Ceramic">
+                                               
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #FF6502;"></span>
+                                              <span class="item-text">VCT - 1</span>
+                                             </a>
+                                         </li>
+                                               
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #0018FC;"></span>
+                                              <span class="item-text">Ceramic - 1</span>
+                                             </a>
+                                         </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #437BFFCF;"></span>
+                                              <span class="item-text">Ceramic - 2</span>
+                                             </a>
+                                         </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #7683FF96;"></span>
+                                              <span class="item-text">Ceramic - 3</span>
+                                             </a>
+                                         </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #ABB3FF5E;"></span>
+                                              <span class="item-text">Ceramic - 4</span>
+                                             </a>
+                                         </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #0C188D;"></span>
+                                              <span class="item-text">Ceramic - 5</span>
+                                             </a>
+                                         </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: Ceramic - 6;"></span>
+                                              <span class="item-text">Ceramic - 6</span>
+                                             </a>
+                                         </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #121B6F;"></span>
+                                              <span class="item-text">Ceramic - 7</span>
+                                             </a>
+                                         </li>
+                                              
+                                         </ul>
+                                       <!-- Sheet_Vinyl -->
+                                       <a href="#Sheet_Vinyl" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                           <img src="assets/images/icons/plus_box.png" alt="">
+                                           <span class="ml-1 item-text">Sheet Vinyl</span>
+                                       </a>
+                                       <ul class="collapse  list-unstyled pl-4 w-100" id="Sheet_Vinyl">
+                                           <li class="nav-item">
+                                               <a class="nav-link pl-1" href="#">                                         <img src="assets/images/icons/plus_box.png" alt="">
    
                                                 <span class="ml-1 item-text">Sealed Concrete</span>
                                                </a>
                                            </li>
+                                       </ul>
+                                       <!-- Carpet Tile -->
+                                       <a href="#Carpet_Tile" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                           <img src="assets/images/icons/plus_box.png" alt="">
+                                           <span class="ml-1 item-text">Carpet Tile</span>
+                                       </a>
+                                       <ul class="collapse  list-unstyled pl-4 w-100" id="Carpet_Tile">
+
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #6702FF;"></span>
+                                              <span class="item-text">Carpet - 1</span>
+                                             </a>
+                                         </li>
+
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #7E28FF;"></span>
+                                              <span class="item-text">Carpet - 2</span>
+                                             </a>
+                                         </li>
+
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #944EFE;"></span>
+                                              <span class="item-text">Carpet - 3</span>
+                                             </a>
+                                         </li>
+
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #C9A4FF;"></span>
+                                              <span class="item-text">Carpet - 4</span>
+                                             </a>
+                                         </li>
+
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #3F0C8D;"></span>
+                                              <span class="item-text">Carpet - 5</span>
+                                             </a>
+                                         </li>
+
+                                       </ul>
+                                       <!-- Broadloom_Carpet -->
+                                       <a href="#Broadloom_Carpet" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                           <img src="assets/images/icons/plus_box.png" alt="">
+                                           <span class="ml-1 item-text">Broadloom Carpet</span>
+                                       </a>
+                                       <ul class="collapse list-unstyled pl-4 w-100" id="Broadloom_Carpet">
                                            <li class="nav-item">
-                                               <a class="nav-link pl-1" href="./ui-color.html">                                         <img src="assets/images/icons/plus_box.png" alt="">
+                                               <a class="nav-link pl-1" href="#">                                         <img src="assets/images/icons/plus_box.png" alt="">
    
-                                                <span class="ml-1 item-text">Polished Concrete</span>
+                                                <span class="ml-1 item-text">Sealed Concrete</span>
+                                               </a>
+                                           </li>
+                                       </ul>
+                                       <!-- Other_Flooring -->
+                                       <a href="#Other_Flooring" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                           <img src="assets/images/icons/plus_box.png" alt="">
+                                           <span class="ml-1 item-text">Other Flooring</span>
+                                       </a>
+                                       <ul class="collapse list-unstyled pl-4 w-100" id="Other_Flooring">
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #959595;"></span>
+                                              <span class="item-text">Rubber - 1</span>
+                                             </a>
+                                         </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #BEE9C4;"></span>
+                                              <span class="item-text">Turf - 1</span>
+                                             </a>
+                                         </li>
+                                       </ul>
+                                       <!-- Base -->
+                                       <a href="#Base" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                           <img src="assets/images/icons/plus_box.png" alt="">
+                                           <span class="ml-1 item-text">Base</span>
+                                       </a>
+                                       <ul class="collapse list-unstyled pl-4 w-100" id="Base">
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #22B8BD;"></span>
+                                              <span class="item-text">Ceramic Base - 1</span>
+                                             </a>
+                                         </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #F0F900;"></span>
+                                              <span class="item-text">Wood Base - 2</span>
+                                             </a>
+                                         </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link pl-1" href="#">   
+                                                <span class="tiny_box" style="  background-color: #BEDFE9;"></span>
+                                              <span class="item-text">Vinyl Base - 1</span>
+                                             </a>
+                                         </li>
+                                       </ul>
+                                       <!-- Flooring_Add-On -->
+                                       <a href="#Flooring_Add-On" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                           <img src="assets/images/icons/plus_box.png" alt="">
+                                           <span class="ml-1 item-text">Flooring Add-On</span>
+                                       </a>
+                                       <ul class="collapse show list-unstyled pl-4 w-100" id="Flooring_Add-On">
+                                           <li class="nav-item">
+                                               <a class="nav-link pl-1" href="#">                                         <img src="assets/images/icons/plus_box.png" alt="">
+   
+                                                <span class="ml-1 item-text">Water Proofing</span>
                                                </a>
                                            </li>
                                            <li class="nav-item">
-                                               <a class="nav-link pl-1" href="./ui-color.html">                                         <img src="assets/images/icons/plus_box.png" alt="">
+                                               <a class="nav-link pl-1" href="#">                                         <img src="assets/images/icons/plus_box.png" alt="">
    
-                                                <span class="ml-1 item-text">Epoxy</span>
+                                                <span class="ml-1 item-text">Crack Insulation</span>
                                                </a>
                                            </li>
                                            <li class="nav-item">
-                                               <a class="nav-link pl-1" href="./ui-color.html">                                         <img src="assets/images/icons/plus_box.png" alt="">
+                                               <a class="nav-link pl-1" href="#">                                         <img src="assets/images/icons/plus_box.png" alt="">
    
-                                                <span class="ml-1 item-text">Withdraw History</span>
+                                                <span class="ml-1 item-text">Grout</span>
+                                               </a>
+                                           </li>
+                                           <li class="nav-item">
+                                               <a class="nav-link pl-1" href="#">                                         <img src="assets/images/icons/plus_box.png" alt="">
+   
+                                                <span class="ml-1 item-text">Padding</span>
+                                               </a>
+                                           </li>
+                                           <li class="nav-item">
+                                               <a class="nav-link pl-1" href="#">                                         <img src="assets/images/icons/plus_box.png" alt="">
+   
+                                                <span class="ml-1 item-text">Schluter</span>
+                                               </a>
+                                           </li>
+                                           <li class="nav-item">
+                                               <a class="nav-link pl-1" href="#">                                         <img src="assets/images/icons/plus_box.png" alt="">
+   
+                                                <span class="ml-1 item-text">Saddle</span>
+                                               </a>
+                                           </li>
+                                           <li class="nav-item">
+                                               <a class="nav-link pl-1" href="#">                                         <img src="assets/images/icons/plus_box.png" alt="">
+   
+                                                <span class="ml-1 item-text">Nosing</span>
                                                </a>
                                            </li>
                                        </ul>
@@ -1547,49 +2201,155 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="col-md-6 mt-5">
-                              <div class="card bg-white dropdown-card overflow-auto">
+
+                           <div class="col-md-7 mt-5">
+                              <div class="card bg-white dropdown-card h-250 scrollbar overflow-auto">
                                  <div class="scrollbar" style="max-height: 300px;">
-                                    <li class="nav-item">
-                                       <a href="#ui-packages" data-toggle="collapse" aria-expanded="false" class="nav-link">
-                                           <img src="assets/images/icons/plus_box.png" alt="">
-                                           <span class="ml-1 item-text">History</span>
-                                       </a>
-                                       <ul class="collapse list-unstyled pl-4 w-100" id="ui-packages">
-                                           <li class="nav-item">
-                                               <a class="nav-link pl-1" href="./ui-color.html">                                         <img src="assets/images/icons/plus_box.png" alt="">
-   
-                                                <span class="ml-1 item-text">Payment History</span>
-                                               </a>
-                                           </li>
-                                           <li class="nav-item">
-                                               <a class="nav-link pl-1" href="./ui-color.html">                                         <img src="assets/images/icons/plus_box.png" alt="">
-   
-                                                <span class="ml-1 item-text">Reward History</span>
-                                               </a>
-                                           </li>
-                                           <li class="nav-item">
-                                               <a class="nav-link pl-1" href="./ui-color.html">                                         <img src="assets/images/icons/plus_box.png" alt="">
-   
-                                                <span class="ml-1 item-text">Referral History</span>
-                                               </a>
-                                           </li>
-                                           <li class="nav-item">
-                                               <a class="nav-link pl-1" href="./ui-color.html">                                         <img src="assets/images/icons/plus_box.png" alt="">
-   
-                                                <span class="ml-1 item-text">Withdraw History</span>
-                                               </a>
-                                           </li>
-                                       </ul>
-                                   </li>
+                                   
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                       <li class="nav-item" role="presentation">
+
+                                          <a href="#" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                             <img src="assets/images/icons/plus_box.png" alt="">
+                                             <span class="ml-1 item-text">Rubber</span>
+                                         </a>
+                                         
+                                         <!-- Rubber_Flooring_TBD -->
+                                         <span class="image_tabs active" id="Rubber_Flooring_TBD-tab" data-toggle="tab" data-target="#Rubber_Flooring_TBD" type="button" role="tab" aria-controls="Rubber_Flooring_TBD" aria-selected="true"> <span class="tiny_box" style="  background-color: #c0c0c0;
+                                          "></span>
+                                          Rubber Flooring - TBD
+                                         </span>
+
+                                       </li>
+
+                                       <li class="nav-item" role="presentation">
+                                          <a href="#" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                             <img src="assets/images/icons/plus_box.png" alt="">
+                                             <span class="ml-1 item-text">Ceramic</span>
+                                         </a>
+
+                                         <!-- Ceramic_Tile_TBD -->
+                                         <span class="image_tabs" id="Ceramic_Tile_TBD-tab" data-toggle="tab" data-target="#Ceramic_Tile_TBD" type="button" role="tab" aria-controls="Ceramic_Tile_TBD" aria-selected="false">
+                                          <span class="tiny_box" style="  background-color: #0080FF;
+                                          "></span>
+                                          Ceramic Tile - TBD
+                                         </span>
+                                       </li>
+
+                                       <li class="nav-item" role="presentation">
+                                          <a href="#" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                             <img src="assets/images/icons/plus_box.png" alt="">
+                                             <span class="ml-1 item-text">Other</span>
+                                         </a>
+
+                                         <!-- Turf_Carpet_TBD  -->
+                                         <span class="image_tabs " id="Turf_Carpet_TBD-tab" data-toggle="tab" data-target="#Turf_Carpet_TBD" type="button" role="tab" aria-controls="Turf_Carpet_TBD" aria-selected="false">
+                                          <span class="tiny_box" style="  background-color: #009300;
+                                          "></span>
+                                          Turf Carpet - TBD
+                                         </span>
+                                       </li>
+
+                                       <li class="nav-item" role="presentation">
+                                          <a href="#" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                                             <img src="assets/images/icons/plus_box.png" alt="">
+                                             <span class="ml-1 item-text">Base</span>
+                                         </a>
+
+                                         <!-- Ceramic_Base_1 -->
+                                         <span class="image_tabs " id="Ceramic_Base_1-tab" data-toggle="tab" data-target="#Ceramic_Base_1" type="button" role="tab" aria-controls="Ceramic_Base_1" aria-selected="false">
+                                          <span class="tiny_box" style="  background-color: #FFFF00;
+                                          "></span>
+                                          Ceramic Base - 1
+                                         </span>
+                                       </li>
+
+                                       <li class="nav-item" role="presentation">
+
+                                          <!-- Vinyl_Base_1 -->
+                                         <span class="image_tabs " id="Vinyl_Base_1-tab" data-toggle="tab" data-target="#Vinyl_Base_1" type="button" role="tab" aria-controls="Vinyl_Base_1" aria-selected="false">
+                                          <span class="tiny_box" style="  background-color: #00FFFF;
+                                          "></span>
+                                          Vinyl Base - 1
+                                         </span>
+                                       </li>
+                                       <li class="nav-item" role="presentation">
+
+                                          <!-- stone_Saddle_1 -->
+                                         <span class="image_tabs " id="stone_Saddle_1-tab" data-toggle="tab" data-target="#stone_Saddle_1" type="button" role="tab" aria-controls="stone_Saddle_1" aria-selected="false">
+                                          <span class="tiny_box" style="  background-color: #008080;
+                                          "></span>
+                                          stone Saddle - 1
+                                         </span>
+                                       </li>
+                                       <li class="nav-item" role="presentation">
+
+                                          <!-- Schluter_1 -->
+                                         <span class="image_tabs " id="Schluter_1-tab" data-toggle="tab" data-target="#Schluter_1" type="button" role="tab" aria-controls="Schluter_1" aria-selected="false">
+                                          <span class="tiny_box" style="  background-color: #12A6D4;
+                                          "></span>
+                                          Schluter - 1
+                                         </span>
+                                       </li>
+                                     </ul>
+
                                  </div>
                               </div>
 
-                              <div class="card bg-white dropdown-card text-dark">
-                                 <div class="p-2 pt-5 text-center">
-                                    <label for="frame_56_file">Insert Image Here</label>
-                                    <input id="frame_56_file" type="file" placeholder="Insert Image Here" hidden>
-                                 </div>
+                              <div class="">
+                                 
+                                 <div class="tab-content" id="myTabContent">
+                                    <!-- materials_image -->
+                                    <!-- <div class="tab-pane fade show active" id="materials_image" role="tabpanel" aria-labelledby="materials_image-tab">
+                                       <img src="assets/images/materials/Rubber_Flooring_TBD.png" alt="">
+                                       <div class="col-6 position-relative">
+
+                                          <label for="border_color_input">
+                                             <div class="card border_color_card" style="padding: 30px 20px;
+                                          background: white;
+                                          color: #000;">
+                                             Insert Material Color
+                                          </div>
+                                          </label>
+                                          <input style="visibility: hidden;" id="border_color_input" type="color">
+      
+                                       </div>
+                                    </div> -->
+                                    <!-- Rubber_Flooring_TBD -->
+                                    <div class="tab-pane fade show active" id="Rubber_Flooring_TBD" role="tabpanel" aria-labelledby="Rubber_Flooring_TBD-tab">
+                                       <img src="assets/images/materials/Rubber_Flooring_TBD.png" alt="">
+                                    </div>
+
+                                    <!-- Ceramic_Tile_TBD -->
+                                    <div class="tab-pane fade" id="Ceramic_Tile_TBD" role="tabpanel" aria-labelledby="Ceramic_Tile_TBD-tab">
+                                       <img src="assets/images/materials/Ceramic_Tile_TBD.png" alt="">
+                                    </div>
+
+                                    <!-- Turf_Carpet_TBD -->
+                                    <div class="tab-pane fade" id="Turf_Carpet_TBD" role="tabpanel" aria-labelledby="Turf_Carpet_TBD-tab">
+                                       <img src="assets/images/materials/Turf_Carpet _TBD.png" alt="">
+                                    </div>
+
+                                    <!-- Ceramic_Base_1 -->
+                                    <div class="tab-pane fade" id="Ceramic_Base_1" role="tabpanel" aria-labelledby="Ceramic_Base_1-tab">
+                                       <img src="assets/images/materials/Ceramic_Base_1.png" alt="">
+                                    </div>
+
+                                    <!-- Vinyl_Base_1 -->
+                                    <div class="tab-pane fade" id="Vinyl_Base_1" role="tabpanel" aria-labelledby="Vinyl_Base_1-tab">
+                                       <img src="assets/images/materials/Vinyl_Base_1.png" alt="">
+                                    </div>
+
+                                    <!-- stone_Saddle_1 -->
+                                    <div class="tab-pane fade" id="stone_Saddle_1" role="tabpanel" aria-labelledby="stone_Saddle_1-tab">
+                                       <img src="assets/images/materials/stone_Saddle_1.png" alt="">
+                                    </div>
+
+                                    <!-- Schluter_1 -->
+                                    <div class="tab-pane fade" id="Schluter_1" role="tabpanel" aria-labelledby="Schluter_1-tab">
+                                       <img src="assets/images/materials/Schluter_1.png" alt="">
+                                    </div>
+                                  </div>
                               </div>
 
                            </div>
@@ -1623,7 +2383,6 @@
             <div class="modal-dialog modal-xl" style="width:800px;">
                <div class="modal-content">
                   <div class="modal-header">
-                     <h5 class="modal-title" id="main_settingsLabel">main_settings</h5>
                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">
                            <img src="assets/images/icons/Multiply.png" alt="close" />
@@ -2331,9 +3090,139 @@
                </div>
               
                <div class="text-center mt-4">
-                  <button type="submit" class="btn btn-light">Next</button>
+                  <button  data-target="#frame_52" data-toggle="modal" data-dismiss="modal" aria-label="Close" class="btn btn-light">Next</button>
                </div>
                </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- frame_52 modal -->
+   <div class="modal fade" id="frame_52" tabindex="-1" aria-labelledby="frame_52Label" aria-hidden="true"
+      data-backdrop="static" aria-hidden="true">
+      
+      <div class="modal-dialog " style="width:396px;">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div>
+                  <form action="#">
+                     <div class="form-group row justify-content-center">
+                        <div class="col-10 text-center">
+                           <label for="#">Do you want to import a drawing or start from scratch?</label>
+                        </div>
+                        <!-- Installation Method -->
+                        <div class="col-12 mt-3 chat ">
+                           <div>
+                              <label for="Scale">Search Files</label>
+                           </div>
+                           <div class="input-group">
+                              <label for="pdfFile">
+                                 <img style="
+                              position: absolute;
+                              left: 10px;
+                              top: 7px;" src="assets/images/icons/Folder_icon.png" alt="">
+                              </label>
+                              <input class="pl-5" id="search_project_file" style="width: 320px;" type="Search"  value="">
+                              <label for="search" class="search-lable m-0"><img class="search-icon" src="assets/images/chat-modal/search.png" alt="Not-Show"></label>
+                           </div>
+
+                           <div class="input-group">
+                              <input type="file" class="form-control-file" id="pdfFile" name="pdfFile" accept=".pdf" hidden>
+                           </div>
+
+                        </div>
+
+
+
+                     </div>
+               </div>
+              
+               <div class="text-center mt-4">
+                  <label for="pdfFile" class="btn btn-light">Start From Scratch</label>
+                  <button  class="btn btn-light">Next</button>
+               </div>
+               </form>
+
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- frame_47 modal -->
+   <div class="modal fade" id="frame_47" tabindex="-1" aria-labelledby="frame_47Label" aria-hidden="true"
+      data-backdrop="static" aria-hidden="true">
+      
+      <div class="modal-dialog " style="width:396px;">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div>
+                  <form action="#">
+                     <div class="form-group row">
+                        
+                        <!-- Installation Method -->
+                        <div class="col-8 mt-3">
+                           <div>
+                              <label for="Scale">Width</label>
+                           </div>
+                           
+                           <div class="position-relative">
+
+                              <img style="
+                              position: absolute;
+                              left: 10px;
+                              top: 7px;" src="assets/images/icons/Folder_icon.png" alt="">
+                              <input class="pl-5 modal-input" style="max-width: 200px;" type="text"  value="f45 f_iteam A13" readonly>
+                           </div>
+
+                        </div>
+                        
+                          <!-- Installation Method -->
+                          <div class="col-4 mt-3">
+                           <div>
+                              <label for="Scale">Scale</label>
+                           </div>
+                           
+                           <select class="modal-select w-100">
+                              <option selected>1/8</option>
+                              <option value="20">20</option>
+                              <option value="50">50</option>
+                           </select>
+                        </div>
+                        <div class="col-12 pt-4">
+                           <label>Current drawings attached</label>
+                           <div class="position-relative">
+
+                              <img style="
+                              position: absolute;
+                              left: 10px;
+                              top: 7px;" src="assets/images/icons/file_icon.png" alt="">
+                              <input class="pl-5 modal-input bg-transparent text-white" style="max-width: 200px;" type="text"  value="f45 f_iteam A13" readonly>
+                           </div>
+
+                        </div>
+
+
+                     </div>
+               </div>
+              
+               <div class="text-center mt-4">
+                  <button  class="btn btn-light">Finish</button>
+               </div>
+               </form>
+
             </div>
          </div>
       </div>
@@ -2523,39 +3412,7 @@
       </div>
    </div>
 
-      <!-- frame_56 modal -->
-      <div class="modal fade" id="frame_56" tabindex="-1" aria-labelledby="frame_56Label" aria-hidden="true"
-      data-backdrop="static" aria-hidden="true">
-      <div class="modal-dialog " style="width:546px; ">
-         <div class="modal-content">
-            <div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">
-                     <img src="assets/images/icons/Multiply.png" alt="close" />
-                  </span>
-               </button>
-            </div>
-            <div class="modal-body">
 
-
-               <div class="">
-                  <form action="#">
-                     <label for="">Materials</label>
-                     <div>
-                        <textarea name="" id="" cols="18" rows="16">- 2 Days Before</textarea>
-                     </div>
-                  </form>
-               </div>
-
-               <div class="text-center mt-4">
-                  <button type="submit" class="btn btn-light">Next</button>
-               </div>
-
-
-            </div>
-         </div>
-      </div>
-   </div>
 
    <!-- invite modal -->
    <div class="modal fade chat" id="invite" tabindex="-1" aria-labelledby="inviteLabel" aria-hidden="true"
@@ -2658,6 +3515,315 @@
       </div>
    </div>
 
+   <!-- chat_open modal -->
+   <div class="modal fade chat" id="chat_open" tabindex="-1" aria-labelledby="chat_openLabel" aria-hidden="true"
+      data-backdrop="static" aria-hidden="true">
+      <div class="modal-dialog " style="width:420px;">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body open_chat" >
+
+               <div class="notification">
+                  <div class="row m-0 justify-content-between  py-2">
+                     <div class="media  align-items-center col-6">
+                        
+                        <div class="position-relative">
+                           <img src="assets/images/icons/chat_profile_1.png" class="mr-3 img-fluid rounded-circle"
+                              alt="profile">
+                        </div>
+                        
+                        <div class="position-relative">
+                           <img src="assets/images/icons/chat_profile.png" class="mr-3 img-fluid rounded-circle"
+                              alt="Show">
+                        </div>
+                     </div>
+                     
+                     <div class="media-body col-6">
+                        <h5 class=" mb-0">Martina Wolna</h5>
+                        <h5 class=" mb-0">Maciej Kowalski</h5>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="scrollbar py-2" style=" height: 340px; overflow: auto; ">
+                  <div class="notification pr-2" style="max-height: 300px;">
+                    
+                     <p class="text-center">1 FEB 12:00</p>
+                     <div>
+                        <p class="recieve message">I commented on Figma, I want to add some fancy icons. Do you have any icon set?</p>
+                     </div>
+                     <div class="sender">
+                        <p class="send message">I am in a process of designing some. When do you need them?</p>
+                     </div>
+                     <div>
+                        <p class="recieve message">Next month?</p>
+                     </div>
+                     <div class="sender">
+                        <p class="send message">I am almost finish. Please give me your email, I will ZIP them and send you as son as im finish.</p>
+                     </div>
+                     <div class="sender">
+                        <p class="send message">?</p>
+                     </div>
+                     <p class="text-center">1 FEB 12:00</p>
+
+                     <div>
+                        <p class="recieve message">maciej.kowalski@email.com</p>
+                     </div>
+                     <div class="sender">
+                        <p class="send message">👍</p>
+                     </div>
+
+                     
+                  </div>
+               </div>
+
+                       <!-- Reply Box -->
+                  <div class="row reply pt-4">
+                     <div class="col-sm-10 reply-main">
+                     <textarea class="form-control send_msg_input scrollbar" rows="1" id="comment"></textarea>
+                     <span class="send_msg_btn">
+                        <img src="assets/images/icons/send_msg.png" alt="">
+                     </span>
+                     </div>
+                     <div class="col-sm-2 pl-0">
+                        <img src="assets/images/icons/camera_btn.png" alt="">
+                     </div>
+                  </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+      <!-- frame_83 modal -->
+      <div class="modal fade" id="frame_83" tabindex="-1" aria-labelledby="frame_83Label" aria-hidden="true"
+      data-backdrop="static" aria-hidden="true">
+      <div class="modal-dialog " style="width:590px; ">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body">
+               
+               <div class="row">
+                  <div class="col-md-4">
+                     <button class="btn btn-light btn-block modal_btn_block">Tile</button>
+                  </div>
+                  <div class="col-md-4">
+                     <button class="btn btn-light btn-block modal_btn_block">HardWood</button>
+                  </div>
+                  <div class="col-md-4">
+                     <button class="btn btn-light btn-block modal_btn_block">Broodloom Carpet</button>
+                  </div>
+                  <div class="col-md-4">
+                     <button class="btn btn-light btn-block modal_btn_block">Carpet Tile</button>
+                  </div>
+                  <div class="col-md-4">
+                     <button class="btn btn-light btn-block modal_btn_block">Concrete</button>
+                  </div>
+                  <div class="col-md-4">
+                     <button class="btn btn-light btn-block modal_btn_block">Sheet Vinyl</button>
+                  </div>
+                  <div class="col-md-4">
+                     <button class="btn btn-light btn-block modal_btn_block">Base</button>
+                  </div>
+                  <div class="col-md-4">
+                     <button class="btn btn-light btn-block modal_btn_block">Add-Ons</button>
+                  </div>
+                  <div class="col-md-4">
+                     <button class="btn btn-light btn-block modal_btn_block">Other</button>
+                  </div>
+               </div>
+
+
+            </div>
+         </div>
+      </div>
+   </div>
+
+      <!-- frame_82 modal -->
+      <div class="modal fade" id="frame_82" tabindex="-1" aria-labelledby="frame_82Label" aria-hidden="true"
+      data-backdrop="static" aria-hidden="true">
+      <div class="modal-dialog " style="width:590px; ">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     <img src="assets/images/icons/Multiply.png" alt="close" />
+                  </span>
+               </button>
+            </div>
+            <div class="modal-body">
+               
+               <div class="row">
+                  <div class="col-4">
+                     
+               <div class="scrollbar bg-white dropdown-card mt-2" style=" height: 440px; overflow: auto; ">
+                  <div class="scrollbar" style="max-height: 300px;">
+                     <li class="nav-item">
+                        <!-- Dotted_style -->
+                        <a href="#Dotted_style" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                           <img src="assets/images/icons/minus_box.png" alt=""> 
+                           <span class="ml-1 item-text">Dotted</span>
+                        </a>
+                        <!-- Dotted_style collapsed  -->
+                        <ul class="collapse show list-unstyled pl-4 w-100" id="Dotted_style">
+                            <li class="nav-item">
+                                <a class="nav-link pl-1" href="#">                 
+                                 <span class="ml-1 item-text">Style - 1</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pl-1" href="#">                 
+                                 <span class="ml-1 item-text">Style - 2</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pl-1" href="#">                 
+                                 <span class="ml-1 item-text">Style - 3</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- Strips_style -->
+                        <a href="#Strips_style" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                           <img src="assets/images/icons/minus_box.png" alt=""> 
+                           <span class="ml-1 item-text">Strips</span>
+                        </a>
+                        <!-- Strips_style collapsed  -->
+                        <ul class="collapse show list-unstyled pl-4 w-100" id="Strips_style">
+                            <li class="nav-item">
+                                <a class="nav-link pl-1" href="#">                 
+                                 <span class="ml-1 item-text">Style - 1</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pl-1" href="#">                 
+                                 <span class="ml-1 item-text">Style - 2</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pl-1" href="#">                 
+                                 <span class="ml-1 item-text">Style - 3</span>
+                                </a>
+                            </li>
+                        </ul>
+                      
+                        <!-- Triangles_style -->
+                        <a href="#Triangles_style" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                           <img src="assets/images/icons/minus_box.png" alt=""> 
+                           <span class="ml-1 item-text">Triangles</span>
+                        </a>
+                        <!-- Triangles_style collapsed  -->
+                        <ul class="collapse show list-unstyled pl-4 w-100" id="Triangles_style">
+                            <li class="nav-item">
+                                <a class="nav-link pl-1" href="#">                 
+                                 <span class="ml-1 item-text">Style - 1</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pl-1" href="#">                 
+                                 <span class="ml-1 item-text">Style - 2</span>
+                                </a>
+                            </li>
+                        </ul>
+                      
+                        <!-- Checkerboards_style -->
+                        <a href="#Checkerboards_style" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                           <img src="assets/images/icons/minus_box.png" alt=""> 
+                           <span class="ml-1 item-text">Checkerboards</span>
+                        </a>
+                        <!-- Checkerboards_style collapsed  -->
+                        <ul class="collapse show list-unstyled pl-4 w-100" id="Checkerboards_style">
+                            <li class="nav-item">
+                                <a class="nav-link pl-1" href="#">                 
+                                 <span class="ml-1 item-text">Style - 1</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pl-1" href="#">                 
+                                 <span class="ml-1 item-text">Style - 2</span>
+                                </a>
+                            </li>
+                        </ul>
+                      
+                        <!-- Waves_style -->
+                        <a href="#Waves_style" data-toggle="collapse" aria-expanded="false" class="nav-link">
+                           <img src="assets/images/icons/minus_box.png" alt=""> 
+                           <span class="ml-1 item-text">Waves</span>
+                        </a>
+                        <!-- Waves_style collapsed  -->
+                        <ul class="collapse show list-unstyled pl-4 w-100" id="Waves_style">
+                            <li class="nav-item">
+                                <a class="nav-link pl-1" href="#">                 
+                                 <span class="ml-1 item-text">Style - 1</span>
+                                </a>
+                            </li>
+                        </ul>
+                      
+                    </li>
+                  </div>
+               </div>
+
+                  </div>
+                  
+                  <div class="col-8">
+                     <!-- style_1 -->
+                     <div class="styles_img">
+                        <img src="assets/images/styles/style_1.png" alt="">
+                     </div>
+                     <!-- style_2 -->
+                     <div class="styles_img">
+                        <img src="assets/images/styles/style_2.png" alt="">
+                     </div>
+                     <!-- style_3 -->
+                     <div class="styles_img">
+                        <img src="assets/images/styles/style_3.png" alt="">
+                     </div>
+                     <!-- style_4 -->
+                     <div class="styles_img">
+                        <img src="assets/images/styles/style_4.png" alt="">
+                     </div>
+                     <!-- style_5 -->
+                     <div class="styles_img">
+                        <img src="assets/images/styles/style_5.png" alt="">
+                     </div>
+                     <!-- style_6 -->
+                     <div class="styles_img">
+                        <img src="assets/images/styles/style_6.png" alt="">
+                     </div>
+                     <!-- style_7 -->
+                     <div class="styles_img">
+                        <img src="assets/images/styles/style_7.png" alt="">
+                     </div>
+                     <!-- style_8 -->
+                     <div class="styles_img">
+                        <img src="assets/images/styles/style_8.png" alt="">
+                     </div>
+                     <!-- style_8 -->
+                     <div class="styles_img">
+                        <button class="btn btn-light btn-block btn-disabled">Create A Custom Hatch</button>
+                     </div>
+                     <div class="text-center">
+                        <button class="btn btn-light">Start New</button>
+                        <button class="btn btn-light">Import</button>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+
 
    </div>
    <!-- JavaScript -->
@@ -2668,6 +3834,12 @@
 
    <script>
       $(document).ready(function(){
+         function changeclr(obj)
+         {
+            $('.colors_card').css("background-color",obj.value);
+         }
+
+         // range slider js 
          $( function() {
         $( "#slider-range" ).slider({
           orientation: "vertical",
@@ -2692,6 +3864,21 @@
         $( "#wall_thickness2" ).val( $( "#slider-range2" ).slider( "values", 0 )+"%"  +
           " - " + $( "#slider-range2" ).slider( "values", 1 )+"%"  );
       } );
+
+
+      // show file name in input dile 
+      $('#pdfFile').change(function(e) {
+                var file_name = e.target.files[0].name;
+                $("#search_project_file").val(file_name);
+ 
+      });
+
+      // change border color using jquery
+      $('#border_color_input').change(function(e) {
+            var border_color = $('#border_color_input').val();
+            $(".border_color_card").css("background-color", border_color);
+      });
+
 
 
       });
